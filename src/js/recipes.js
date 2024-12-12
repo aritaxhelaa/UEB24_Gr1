@@ -22,4 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+    
+    const allButton = document.querySelector('.filter-btn[data-category="all"]');
+    if (allButton) allButton.click();
 });
