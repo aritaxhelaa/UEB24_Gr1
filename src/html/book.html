@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/paymentForm.css" />
+    <script src="login.js"></script>
     <title>Book Store</title>
     <style>
       body {
@@ -19,7 +21,7 @@
         text-align: center;
         max-width: 600px;
         padding: 20px;
-        background: white;
+        background: #fffbf0;
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
@@ -47,29 +49,38 @@
         padding: 10px 20px;
         font-size: 16px;
         color: white;
-        background: #007bff;
+        background: #ff7a00;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         text-decoration: none;
       }
       .buy-btn:hover {
-        background: #0056b3;
+        background: #e06600;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <img src="../../../assets/images/cookbook.jpg" alt="Book Cover" />
+      <img src="../../assets/images/cookbook.jpg" alt="Book Cover" />
       <h1>Our Special Recipe Book</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
-        asperiores, aspernatur sequi rem corrupti obcaecati dolorem fuga
-        temporibus, quos tempore inventore eos laudantium dignissimos veritatis
-        dolorum perferendis labore sint. Totam.
+        Discover a world of flavor with <i>The Basic Cook Book Guide!</i> Packed with
+        classic recipes, easy-to-follow instructions, and tips for every level
+        of home cook, this book will help you create delicious meals that bring
+        joy to your table. From quick weeknight dinners to impressive dishes for
+        special occasions, you'll find everything you need to elevate your
+        cooking game. <br><br>
+ <b>       Healthy, simple, and inspiring—cooking made fun for
+  everyone!</b>
       </p>
       <p class="price">$19.99</p>
       <button class="buy-btn" id="buyNow">Buy Now</button>
     </div>
+    <script>
+      document.getElementById("buyNow").addEventListener("click", function () {
+        window.location.href = "paymentForm.html";
+      });
+    </script>
   </body>
 </html>
