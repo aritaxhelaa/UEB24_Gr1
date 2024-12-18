@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Change header image based on category
             if (category === "breakfast") {
-                header.style.backgroundImage = "url('breakfast.jpg')";
+                header.style.backgroundImage = "url('../../assets/images/breakfast.jpg')";
             } else if (category === "lunch") {
                 header.style.backgroundImage = "url('lunch.jpeg')";
             } else if (category === "all") {
