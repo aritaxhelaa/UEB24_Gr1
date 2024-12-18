@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yummy</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <title>Document</title>
+    <style>
+        .background{
+            display: flex;
+            justify-content: space-between;
+        }
+        .list{
+            display: flex;
+            margin-top:35px;
+            margin-right:30px;   
+        }
+        .list li{
+            list-style-type: none;
+            margin-left: 15px;
+        }
+        .list li a{
+            text-decoration: none;
+            color:black;
+        }
+        #img1{
+            width:auto;
+            height: 90px;
+            margin-left:20px;
+        }
+    
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <a href="#" class="logo">Yummy</a>
+    <!--Menu-->
+    <div class="background">
+        <div class="logo">
+            <img id="img1" src="../../assets/images/recipes1.jpg">
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Book</a></li>
+        <div id="list">
+            <ul class="list">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="recipes.html">RECIPES</a></li>
+                <li><a href="book.html">BOOK</a></li>
+                <li><a href="aboutUs.html">ABOUT US</a></li>
+                <li><a href="healthWellness.html">HEALTH & WELLNESS</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </div>
+    <!--Menu end-->
 </body>
 </html>
-
