@@ -5,8 +5,17 @@ document.addEventListener("DOMContentLoaded", function() {
     filterButtons.forEach(button => {
         button.addEventListener("click", function() {
             const category = this.getAttribute("data-category");
+           
+            foodItems.forEach(item => {
+                if (category === "all" || item.classList.contains(category)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
 
-            // Change header image based on category
+
+            
             if (category === "breakfast") {
                 header.style.backgroundImage = "url('../../assets/images/breakfast.jpg')";
             } else if (category === "lunch") {
