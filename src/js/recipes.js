@@ -20,15 +20,15 @@ document.addEventListener("DOMContentLoaded", function() {
             if (category === "breakfast") {
                 header.style.backgroundImage = "url('../../assets/images/breakfast.jpg')";
             } else if (category === "lunch") {
-                header.style.backgroundImage = "url('lunch.jpeg')";
+                header.style.backgroundImage = "url('../../assets/images/lunch.jpeg')";
             } else if (category === "all") {
-                header.style.backgroundImage = "url('all.jpg')";
+                header.style.backgroundImage = "url('../../assets/images/all.jpg')";
             } else if (category === "dinner") {
-                header.style.backgroundImage = "url('dinner.jpg')";
+                header.style.backgroundImage = "url('../../assets/images/dinner.jpg')";
             } else if (category === "desserts") {
-                header.style.backgroundImage = "url('dessert.jpg')";
+                header.style.backgroundImage = "url('../../assets/images/dessert.jpg')";
             } else {
-                header.style.backgroundImage = "url('default-header.jpg')";
+                header.style.backgroundImage = "url('../../assets/images/default-header.jpg')";
             }
         });
     });
