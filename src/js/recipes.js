@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const header = document.querySelector("header");
+    const foodItems = document.querySelectorAll(".food-item");
 
     filterButtons.forEach(button => {
         button.addEventListener("click", function() {
