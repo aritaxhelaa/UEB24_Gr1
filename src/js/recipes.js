@@ -36,7 +36,38 @@ document.addEventListener("DOMContentLoaded", function() {
     const allButton = document.querySelector('.filter-btn[data-category="all"]');
     if (allButton) allButton.click();
 });
-    
+document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const header = document.querySelector("header");
+    const foodItems = document.querySelectorAll(".food-item");
+    const searchInput = document.getElementById("search-input");
+
+    // Funksionaliteti i filtrimit bazuar në kategori
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const category = this.getAttribute("data-category");
+            foodItems.forEach(item => {
+                if (category === "all" || item.classList.contains(category)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            // Ndryshimi i imazhit të header-it bazuar në kategori
+            const images = {
+                breakfast: "url('../../assets/images/breakfast.jpg')",
+                lunch: "url('../../assets/images/lunch.jpeg')",
+                dinner: "url('../../assets/images/dinner.jpg')",
+                desserts: "url('../../assets/images/dessert.jpg')",
+                all: "url('../../assets/images/all.jpg')",
+                default: "url('../../assets/images/default-header.jpg')",
+            };
+            header.style.backgroundImage = images[category] || images.default;
+        });
+    });
+
+    // Funksionaliteti i kërkimit
     searchInput.addEventListener("input", function() {
         const searchQuery = searchInput.value.toLowerCase().trim();
         foodItems.forEach(item => {
@@ -48,6 +79,14 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // Zgjidh butonin "All" si parazgjedhje
+    const allButton = document.querySelector('.filter-btn[data-category="all"]');
+    if (allButton) allButton.click();
+});
+
+    
+
 
 
 
