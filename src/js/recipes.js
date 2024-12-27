@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (category === "breakfast") {
                 header.style.backgroundImage = "url('../../assets/images/breakfast.jpg')";
             } else if (category === "lunch") {
-                header.style.backgroundImage = "url('../../assets/images/lunch.jpeg')";
+                header.style.backgroundImage = "url('../../assets/images/lunch.jpg')";
             } else if (category === "all") {
                 header.style.backgroundImage = "url('../../assets/images/all.jpg')";
             } else if (category === "dinner") {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const foodItems = document.querySelectorAll(".food-item");
     const searchInput = document.getElementById("search-input");
 
-    // Funksionaliteti i filtrimit bazuar në kategori
+    
     filterButtons.forEach(button => {
         button.addEventListener("click", function() {
             const category = this.getAttribute("data-category");
@@ -54,10 +54,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
 
-            // Ndryshimi i imazhit të header-it bazuar në kategori
+           
             const images = {
                 breakfast: "url('../../assets/images/breakfast.jpg')",
-                lunch: "url('../../assets/images/lunch.jpeg')",
+                lunch: "url('../../assets/images/lunch.jpg')",
                 dinner: "url('../../assets/images/dinner.jpg')",
                 desserts: "url('../../assets/images/dessert.jpg')",
                 all: "url('../../assets/images/all.jpg')",
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Funksionaliteti i kërkimit
+    
     searchInput.addEventListener("input", function() {
         const searchQuery = searchInput.value.toLowerCase().trim();
         foodItems.forEach(item => {
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Zgjidh butonin "All" si parazgjedhje
+   
     const allButton = document.querySelector('.filter-btn[data-category="all"]');
     if (allButton) allButton.click();
 });
