@@ -91,11 +91,11 @@ nav a:hover {
 }
 
 
-#ingredients, #instructions, #importantinformation, #tips {
+#ingredients, #instructions, #importantinformation, #nutritions, #tips {
     margin-top: 20px;
 }
 
-#ingredients h2, #instructions h2, #importantinformatin h2, #tips h2 {
+#ingredients h2, #instructions h2, #importantinformation h2, #nutritions h2, #tips h2 {
     color: #000301;
 }
 
