@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar-placeholder {
+    position: relative;
+    width: 100%;
+    top: 0;
+}
+
+.background {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Rest of your existing navbar.css styles remain the same */
+.list {
+    display: flex;
+    margin-top: 35px;
+    margin-right: 30px;
+}
+
+.list li {
+    list-style-type: none;
+    margin-left: 25px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.list li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(236, 167, 83);
+    transition: width 0.3s ease;
+}
+
+.list li a:hover {
+    color: rgb(236, 167, 83);
+}
+
+.list li a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    margin-top: 1px;
+    margin-left: 30px;
+}
+
+#logostyle {
+    font-family: "Dancing Script", serif;
+    font-size: 40px;
+    color: rgb(154, 140, 155);
+}
+
+#homee {
+    font-size: 40px;
+    font-family: "Outfit", serif;
+}
+
+#hr1 {
+    border: 0.5px solid rgb(220, 208, 219);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .background {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .logo {
+        margin: 0;
+        text-align: center;
+    }
+}
+.background {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: white;
+}
+
+.list {
+    display: flex;
+    margin-top: 35px;
+    margin-right: 30px;
+}
+
+.list li {
+    list-style-type: none;
+    margin-left: 25px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.list li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(236, 167, 83);
+    transition: width 0.3s ease;
+}
+
+.list li a:hover {
+    color: rgb(236, 167, 83);
+}
+
+.list li a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    margin-top: 1px;
+    margin-left: 30px;
+}
+
+#logostyle {
+    font-family: "Dancing Script", serif;
+    font-size: 40px;
+    color: rgb(154, 140, 155);
+}
+
+#homee {
+    font-size: 40px;
+    font-family: "Outfit", serif;
+}
+
+#hr1 {
+    border: 0.5px solid rgb(220, 208, 219)
+}
+
+@media (max-width: 768px) {
+    .background {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .logo {
+        margin: 0;
+        text-align: center;
+    }
+}
