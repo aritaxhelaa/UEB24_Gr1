@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
@@ -8,6 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
     <style>
         .about{
             display: flex;
@@ -18,40 +29,82 @@
             height:100%;
             background-color:#d2b4de;
         }
-        .logo{
-            width:10px;
-        }
-        #logo{
-            font-size: 40px;
-        }
-        #of{
+     
+     
+      #of{
             font-size: 20px;
+        }  
+        
+        #homee{
+        font-size: 40px;
+        font-family: "Outfit", serif;
+       }
+
+       #logostyle{
+            font-family: "Dancing Script", serif;
+            font-size: 40px;
+            color:rgb(154, 140, 155)
         }
-        #home{
-            font-size: 28px;
+        .background{
+            display: flex;
+            justify-content: space-between;
         }
+        .list{
+            display: flex;
+            margin-top:35px;
+            margin-right:30px;   
+        }
+        .list li{
+            list-style-type: none;
+            margin-left: 15px;
+        }
+        .list li a{
+            text-decoration: none;
+            color:black;
+        }
+        .logo{
+      
+          margin-top:1px;
+         margin-left:30px;
+        }
+        .div_aboutus{
+            background-color:rgb(248, 246, 248) ;
+        }
+        .div_au2{
+            position: static;
+            background-color:rgb(239, 232, 238);
+            width: 170px;
+        }
+
+
     </style>
 </head>
 <body>
-    <div class="about">
-        <div class="menu">
-            <div class="logo">
-                <p id="logo">Taste<br><span id="of">of</span><span id="home">Home</span></p>
-            </div>
-            <div>
-                <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#">b</a></li>
-                    <li><a href="#">c</a></li>
-                    <li><a href="#">d</a></li>
-                    <li><a href="#">e</a></li>
-                    <li><a href="#">f</a></li>
-                </ul>
-            </div>
+    <div class="background">
+        <div class="logo">
+            <p id="logoo"><b id="homee">Home</b><span id="logostyle">  Cooking</span></p>
+        </div>
+        <div id="list">
+            <ul class="list">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="recipes.html">RECIPES</a></li>
+                <li><a href="book.html">BOOK</a></li>
+                <li><a href="about_us.html">ABOUT US</a></li>
+                <li><a href="healthWellness.html">HEALTH & WELLNESS</a></li>
+            </ul>
         </div>
     </div>
+  
 
-    <div id="home">
+
+    <div class="div_aboutus">
+      <div class="div_au2"> 
+        <ul>
+           <li><a href="#Who We Are">Who We Are</a></li>
+        </ul>
+    </div>
+    </div>
+
     </div>
 </head>
 <body>
