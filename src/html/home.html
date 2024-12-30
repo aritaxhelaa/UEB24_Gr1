@@ -5,73 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="../css/navbar.css">
+
     <style>
-        /* Enhanced Navbar Styles */
-        .background {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 2rem;
-            background: white;
-        }
-
-        .list {
-            display: flex;
-            margin-top: 35px;
-            margin-right: 30px;
-        }
-
-        .list li {
-            list-style-type: none;
-            margin-left: 25px;
-        }
-
-        .list li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            padding: 0.5rem 0;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .list li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: rgb(236, 167, 83);
-            transition: width 0.3s ease;
-        }
-
-        .list li a:hover {
-            color: rgb(236, 167, 83);
-        }
-
-        .list li a:hover::after {
-            width: 100%;
-        }
-
-        .logo {
-            margin-top: 1px;
-            margin-left: 30px;
-        }
 
         #logostyle {
             font-family: "Dancing Script", serif;
@@ -79,10 +22,7 @@
             color: rgb(154, 140, 155);
         }
 
-        #homee {
-            font-size: 40px;
-            font-family: "Outfit", serif;
-        }
+
 
         /* Preserved Original Styles */
         #img1 {
@@ -166,22 +106,7 @@
     </style>
 </head>
 <body>
-    <!--Menu-->
-    <nav class="background">
-        <div class="logo">
-            <p id="logoo"><b id="homee">Home</b><span id="logostyle">  Cooking</span></p>
-        </div>
-        <div id="list">
-            <ul class="list">
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="recipes.html">RECIPES</a></li>
-                <li><a href="book.html">BOOK</a></li>
-                <li><a href="about_us.html">ABOUT US</a></li>
-                <li><a href="healthWellness.html">HEALTH & WELLNESS</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!--Menu end-->
+    <div id="navbar-placeholder"></div>
     <hr id="hr1"> 
     <p id="p1"><b>SIPMLE RECIPES MADE FOR</b> <span id="span1"> real,  actual,  everyday life.</span></p>
     <div class="div1">
@@ -213,6 +138,7 @@
         </div>
 
     </div>
+    <script src="../js/navbar.js"></script>
 </body>
 </html>
 
