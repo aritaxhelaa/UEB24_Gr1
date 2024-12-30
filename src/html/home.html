@@ -14,94 +14,155 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-
- 
     <style>
-        .background{
+        /* Enhanced Navbar Styles */
+        .background {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 2rem;
+            background: white;
         }
-        .list{
+
+        .list {
             display: flex;
-            margin-top:35px;
-            margin-right:30px;   
+            margin-top: 35px;
+            margin-right: 30px;
         }
-        .list li{
+
+        .list li {
             list-style-type: none;
-            margin-left: 15px;
+            margin-left: 25px;
         }
-        .list li a{
+
+        .list li a {
             text-decoration: none;
-            color:black;
+            color: #333;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s ease;
         }
-        #img1{
-            width:auto;
+
+        .list li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(236, 167, 83);
+            transition: width 0.3s ease;
+        }
+
+        .list li a:hover {
+            color: rgb(236, 167, 83);
+        }
+
+        .list li a:hover::after {
+            width: 100%;
+        }
+
+        .logo {
+            margin-top: 1px;
+            margin-left: 30px;
+        }
+
+        #logostyle {
+            font-family: "Dancing Script", serif;
+            font-size: 40px;
+            color: rgb(154, 140, 155);
+        }
+
+        #homee {
+            font-size: 40px;
+            font-family: "Outfit", serif;
+        }
+
+        /* Preserved Original Styles */
+        #img1 {
+            width: auto;
             height: 90px;
-            margin-left:20px;
+            margin-left: 20px;
         }
-        #hr1{
+
+        #hr1 {
             border: 0.5px solid rgb(220, 208, 219)
         }
-        #p1{
+
+        #p1 {
             text-align: center;
             font-size: 23px;
         }
-        #span1{
+
+        #span1 {
             font-family: "Dancing Script", serif;
             font-size: 30px;
             color: rgb(154, 140, 155);
         }
-        .div1{
+
+        .div1 {
             background-color: rgb(240, 240, 239);
         }
-        .images{
+
+        .images {
             display: flex;
             justify-content: space-around;
             margin-left: 165px;
             margin-right: 165px;
             padding-left: 0;
-            padding-right:0;
+            padding-right: 0;
         }
-        #titulli1{
+
+        #titulli1 {
             background-color: rgb(236, 167, 83);
             width: 100px;
-            margin-left:5%;
+            margin-left: 5%;
             height: 33px;
             margin-top: -25px;
             position: absolute;
         }
-        #titulli2{
-            color:white;
-            font-size:16px;
+
+        #titulli2 {
+            color: white;
+            font-size: 16px;
             text-align: center;
-            margin-top:7px;
+            margin-top: 7px;
         }
-        #logostyle{
-            font-family: "Dancing Script", serif;
-            font-size: 40px;
-            color:rgb(154, 140, 155)
+
+        #image1 {
+            width: 280px;
+            height: auto;
         }
-       .logo{
-      
-            margin-top:1px;
-            margin-left:30px;
-       }
-       #homee{
-        font-size: 40px;
-        font-family: "Outfit", serif;
-       }
-       #image1{
-        width: 280px;
-        height: auto;
-       }
-       #div2{
-        margin-top: 40px;
-        margin-bottom: 40px;
-       }
-    
+
+        #div2 {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .background {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .list {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+            
+            .logo {
+                margin: 0;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
