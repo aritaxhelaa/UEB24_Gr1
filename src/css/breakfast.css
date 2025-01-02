@@ -35,7 +35,7 @@ footer {
     width: 87%;
     box-shadow: 0 6px 12px rgba(6, 6, 6, 0.2);
     border: 5px solid #f7c96c;
-    border-radius: 10 px;
+    border-radius: 10px;
 }
 
 
@@ -53,8 +53,8 @@ footer {
 }
 
 .receta-foto {
-    width: 100%; 
-    height: 130%; 
+    width: 90%; 
+    height: 100%; 
     object-fit:cover; 
 }
 
@@ -70,15 +70,8 @@ footer {
     margin-top: 300px; 
 }
 
-.nutrition-toggle {
-    color: #3e41ef;
-    text-decoration: underline;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
 .nutrition-table {
-    display: none;
+    display: block;
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
