@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Best Dish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 4em;
+      margin: 0;
+      font-weight: 500;
+      color: #ff6347;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .button {
+      margin-top: 20px;
+      font-size: 18px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff4500;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <video class="bg-video" autoplay loop muted>
+    <source src="../../assets/images//meal.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="content">
+    <h1>Welcome to Our Best Dish!</h1>
+    <p>The most delicious food you'll ever taste.</p>
+
+    
+    <button class="button" id="audioButton">
+      View Message
+    </button>
+
+    
+    <button class="button" id="viewRecipeButton">View Recipe</button>
+    <button class="button" id="goToRecipesButton">Go to Recipes</button>
+  </div>
+
+  
+  <audio id="audio" src="../../assets/images/BestDish.mp3" preload="auto"></audio>
+
+  <script>
+    $(document).ready(function () {
+      
+      $("#audioButton").click(function () {
+        var audio = document.getElementById("audio");
+        audio.play();
+      });
+
+      
+      $("#viewRecipeButton").click(function () {
+        window.location.href = "recipePage.html"; 
+      });
+
+      
+      $("#goToRecipesButton").click(function () {
+        window.location.href = "recipes.html"; 
+      });
+    });
+  </script>
+
+</body>
+</html>
