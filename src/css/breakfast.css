@@ -123,13 +123,12 @@ nav a {
     color: #333;
     font-weight: bold;
     padding: 10px 15px;
-    background-color: #f7c96c;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #f7c96c;
+    color: #f7c96c;
 }
 
 
