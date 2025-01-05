@@ -22,7 +22,7 @@
         #logostyle {
             font-family: "Dancing Script", serif;
             font-size: 40px;
-            color: rgb(154, 140, 155);
+            color:rgb(113, 56, 110);
         }
 
 
@@ -35,31 +35,31 @@
         }
 
         #hr1 {
-            border: 1px solid rgb(220, 208, 219);
+            border: 1px solid rgb(172, 142, 170);
         }
         #hr2{
-            border: 2px solid rgb(220, 208, 219);
+            border: 2px solid rgb(172, 142, 170);
             width: 1050px;
             margin-left: 50px;
             margin-right: 0;
             padding-right: 0;
         }
         #hr3{
-            border: 1px solid rgb(220, 208, 219);
+            border: 1px solid rgb(172, 142, 170);
             width: 1050px;
             margin-left: 50px;
             margin-right: 0;
             padding-right: 0;
         }
         #hr4{
-            border: 2px solid rgb(220, 208, 219);
+            border: 2px solid rgb(172, 142, 170);
             width: 1050px;
             margin-left: 50px;
             margin-right: 0;
             padding-right: 0;
         }
         #hr5{
-            border: 1px solid rgb(220, 208, 219);
+            border: 1px solid rgb(172, 142, 170);
             width: 1050px;
             margin-left: 50px;
             margin-right: 0;
@@ -75,7 +75,7 @@
         #span1 {
             font-family: "Dancing Script", serif;
             font-size: 30px;
-            color: rgb(154, 140, 155);
+            color: rgb(172, 142, 170);
         }
 
         .div1 {
@@ -348,17 +348,70 @@
             font-size: 26px;
             font-family: "Outfit", serif;
         }
-    
-
-      
         .div1 a {
-      color: white; 
-      text-decoration: none;
-    }
+            color: white; 
+            text-decoration: none;
+        }
+        .div1 a:hover {
+            color: wheat;
+        }
+        .icons{
+            display: flex;
+            justify-content: space-around;
+        }
+        #icon{
+            font-size: 50px;
+            color: black;
+        }
+        .icons1{
+            width: 300px;
+            margin-left: 250px;
+            margin-top: 50px;
 
-    .div1 a:hover {
-      color: wheat;
-    }
+        }
+        .footer{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            background-color:rgb(236, 167, 83);
+            width: 100%;
+        }
+        .email{
+            margin-right: 250px;
+            background-color: rgb(236, 167, 83);
+            width: 600px;
+            margin-top: 20px;
+        }
+        #signup{
+            font-family: "Dancing Script", serif;
+            font-size: 40px;
+        }
+        #email1{
+            text-align: center;
+        }
+        #email2{
+            text-align: center;
+            margin-top: -15px;
+        }
+        #email3{
+            margin-left: 170px;
+
+        }
+        #email4{
+            width: 100px;
+            height: 35.5px;
+        }
+        #email5{
+            width: 100px;
+            height: 35.5px;
+
+        }
+        #submit{
+            background-color:rgb(154, 140, 155);
+            width: 40px;
+            height: 40px;
+            border-color: rgb(154, 140, 155);
+        }
 
     </style>
 </head>
@@ -531,6 +584,31 @@
 
     <!--------------------------------------->
 
+    <div class="footer">
+        <div class="icons1">
+        <div class="icons">
+            <a id="icon" href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a id="icon" href=""><i class='bx bxl-pinterest' ></i></a>
+            <a id="icon" href=""><i class='bx bxl-tiktok' ></i></a>
+            <a id="icon" href=""><i class='bx bxl-instagram' ></i></a>
+            <a id="icon" href=""><i class='bx bxl-twitter' ></i></a>
+        </div>
+        <div class="logo">
+            <p id="logoo"><b id="homee">Home</b><span id="logostyle">Cooking</span></p>
+        </div>
+        </div>
+
+        <div class="email">
+            <h1 id="email1"><span id="signup">Signup</span> for Email Updates</h1>
+            <p id="email2">Get a Free eCookbook with our top 25 recipes.</p>
+            <form id="email3">
+                <label></label>
+                <input id="email4" type="text" placeholder="Firs Name" required>
+                <input id="email5" type="email" placeholder="Email" required>
+                <button id="submit" name="login" value="login" type="submit">GO</button>
+            </form>
+        </div>
+    </div>
 
 <script>
     var imageIndex=0;
@@ -553,6 +631,8 @@
         imageIndex = (imageIndex + 1) % imageArray.length;
         showImage(imageIndex);
     };
+
+
 </script>
 
 
