@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f1ebd9;
+    color: #8B0000;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #cdf2e5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin:20px auto;
+    width: 98%;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1ebd9;
+    color: #8B0000;
+    border-top: 2px solid #cdf2e5;
+  }
+  
+  .recipe {
+    padding: 20px;
+  }
+  
+  .foto-komenti {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .foto {
+    flex: 0 0 45%; 
+    height: 500px; 
+    overflow: hidden; 
+  }
+  
+  .receta-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .receta-komenti {
+    margin-left: 20px; 
+    width: 55%; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 15px;
+    border: 2px solid #191901;
+    border-radius: 8px; 
+    text-align: left; 
+    margin-top: 350px; 
+  }
+  
+  nav {
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-flex;
+    justify-content: left;
+    gap: 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #191901;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #e3bef6;
+    border-radius: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: white;
+  }
+  
+  #ingredients, #instructions, #importantinformation {
+    margin-bottom: 20px;
+  }
+  #ingredients h2, #instructions h2, #importantinformation h2 {
+    color: #000301;
+    border-bottom: 2px solid #eafcf7;
+    padding-bottom: 5px;
+  }
+  
+  h2 {
+    color: #8B0000;
+    font-size: 24px;
+  }
+  
+  ul, ol {
+    padding-left: 20px;
+  }
+  
+  
+  ul li, ol li {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #B22222;
+  }
+  
+  .video {
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .video iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 2px solid #8B0000;
+  }
+  
