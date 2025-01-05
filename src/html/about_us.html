@@ -29,13 +29,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
-<<<<<<< HEAD
     <style>
         .about{
-=======
-<style>
-    .about{
->>>>>>> d7f5efd13c19563d75a0e621f2927a9abe763d00
             display: flex;
         }
         .menu{
@@ -53,7 +48,6 @@
             color:rgb(154, 140, 155)
         }
 
-<<<<<<< HEAD
         .div_aboutus{
             background-color:rgb(248, 246, 248) ;
         }
@@ -114,69 +108,6 @@
             color: #808b96;
         }
         #tekst5{
-=======
-
-    .div_aboutus{
-        background-color:rgb(248, 246, 248) ;
-    }
-    .div_au2{
-        position: static;
-        background-color:rgb(239, 232, 238);
-        width: 170px;
-    }
-    .aboutus{
-        background-color:rgb(240, 240, 239);
-        display: flex;
-    }
-    #foto1{
-        height:570px;
-        margin-left:190px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .aboutus2{
-        display: flex;
-        margin-top:10px;
-        margin-bottom:0;
-        margin-left: 0;
-    }
-    #linku1{
-        margin-top:14px;
-        text-decoration: none;
-        color:#212f3d;
-        font-size: 13.5px;
-        font-family: "Outfit", serif;
-        margin-left: 0;
-    }
-    #teksti1{
-        margin-left:0;
-        font-size: 13.5px;
-        font-family: "Outfit", serif;
-    }
-    .aboutus3{
-        margin-left: 130px;
-        width: 500px;
-    }
-    #tekst2{
-        font-size: 55px;
-        margin-top: 0;
-        font-family: "Playfair Display", serif;
-        color:  rgb(236, 167, 83);
-        margin-left:0;
-        margin-bottom: 0;
-    }
-    #tekst3{
-        font-size: 20px;
-        margin-top:20px;
-    }
-    #tekst4{
-        font-family: "Dancing Script", serif;
-        font-size: 35px;
-        margin-top: -2px;
-        color: #808b96;
-    }
-    #tekst5{
->>>>>>> d7f5efd13c19563d75a0e621f2927a9abe763d00
             font-family: "Outfit", serif;
             font-size: 17px;
             color:#566573;
@@ -187,6 +118,12 @@
         .personi2{
             display: flex;
         }
+        .personi3{
+            display: flex;
+        }
+        .personi4{
+            display: flex;
+        }
         .personi1 img{
             width: 200px;
             height: 200px;
@@ -194,6 +131,18 @@
             margin-left: 300px;
         }
         .personi2 img{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin-left: 300px;
+        }
+        .personi3 img{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin-left: 300px;
+        }
+        .personi4 img{
             width: 200px;
             height: 200px;
             border-radius: 100px;
@@ -229,6 +178,12 @@
             display: none;
         }
         #shfaq1{
+            display: none;
+        }
+        #shfaq2{
+            display: none;
+        }
+        #shfaq3{
             display: none;
         }
       
@@ -276,7 +231,6 @@
         </div>
     </div>
     </div>
-
 
     <!------------------------------------------>
 
@@ -327,9 +281,49 @@
             </div>
         </div>
 
+        <div class="personi3">
+            <img src="../../assets/images/njeri3.jpg">
+            <div class="details">
+                <h1 class="h11">JENA</h1>
+                <p>
+                    Jenna is the Communications Manager at Home Cooking. 
+                </p>
+                <p id="shfaq2">
+                   She manages much of the day-to-day
+                     communication with readers and brands – on and off the blog. You can find her answering recipe questions on posts,
+                      helping readers with ebook purchases, coordinating partnership details with brands, 
+                      and other various behind-the-scenes projects. Jenna lives in Minnesota with her husband.
+                      <br><button id="hide2">Show Less</button>
+                </p>
+                <button id="show2">
+                    <p>Read More</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="personi4">
+            <img src="../../assets/images/njeri2.jpg">
+            <div class="details">
+                <h1 class="h11">KRISTA</h1>
+                <p>
+                    Krista is the Shoot Assistant at Home Cooking. 
+                </p>
+                <p id="shfaq3">
+                    You’ll find her in the kitchen supporting Lindsay on shoot days, prepping and cooking recipes for the blog. 
+                    She is also the resident recipe tester, who tests and re-tests many recipes to ensure the best cooking experience. 
+                    Krista lives in Minnesota with her husband and 3 children. 
+                    She also enjoys food photography and managing her blog Destination Delish.
+                      <br><button id="hide3">Show Less</button>
+                </p>
+                <button id="show3">
+                    <p>Read More</p>
+                </button>
+            </div>
+        </div>
+
     <br><br><br><br><br><br><br><br><br>
 
-    <script src="../js/navbar.js"></script>
+<script src="../js/navbar.js"></script>
 
 </body>
   
@@ -372,6 +366,7 @@ $(document).ready(function () {
           $('#show1').show();      
         }
       }
+      
       $('#show1').click(function () {
         heq_shfaq('show1'); 
       });
@@ -380,9 +375,53 @@ $(document).ready(function () {
         heq_shfaq('hide1'); 
       });
  });
-<<<<<<< HEAD
-    
-=======
+
+ $(document).ready(function () {
+      
+      function heq_shfaq1(action) {
+        if (action === 'show2') {
+          $('#shfaq2').show();          
+          $('#show2').hide();       
+          $('#hide2').show();       
+        } else if (action === 'hide2') {
+          $('#shfaq2').hide();          
+          $('#hide2').hide();       
+          $('#show2').show();      
+        }
+      }
+      
+      $('#show2').click(function () {
+        heq_shfaq1('show2'); 
+      });
+
+      $('#hide2').click(function () {
+        heq_shfaq1('hide2'); 
+      });
+ });
+
+ $(document).ready(function () {
+      
+      function heq_shfaq2(action) {
+        if (action === 'show3') {
+          $('#shfaq3').show();          
+          $('#show3').hide();       
+          $('#hide3').show();       
+        } else if (action === 'hide3') {
+          $('#shfaq3').hide();          
+          $('#hide3').hide();       
+          $('#show3').show();      
+        }
+      }
+      
+      $('#show3').click(function () {
+        heq_shfaq2('show3'); 
+      });
+
+      $('#hide3').click(function () {
+        heq_shfaq2('hide3'); 
+      });
+ });
+
+ </script>
+ </html>
        
-       
->>>>>>> d7f5efd13c19563d75a0e621f2927a9abe763d00
