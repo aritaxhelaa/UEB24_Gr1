@@ -57,6 +57,74 @@
             line-height: 1.6;
         }
 
+        .tip button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: rgb(236, 167, 83);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .tip button:hover {
+            background-color: #d1845b;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .modal-content h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: rgb(236, 167, 83);
+        }
+
+        .modal-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modal-content li {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #566573;
+        }
+
+        .modal-content button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgb(236, 167, 83);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #d1845b;
+        }
+
         /* Programi i Ushqimit dhe Ushqimi i Shëndetshëm */
         .healthy-eating {
             background-color: #f0f3f5;
@@ -95,14 +163,12 @@
             <div class="tip">
                 <h3>Eat Balanced Meals</h3>
                 <p>Incorporating a variety of foods in your meals ensures you get the essential nutrients needed for optimal health. Our recipes focus on nutrient-rich ingredients that fuel your body.</p>
+                <button id="openModalCategories">View Categories</button>
             </div>
             <div class="tip">
-                <h3>Stay Active</h3>
-                <p>Exercise is key to maintaining a healthy body. We encourage daily movement through simple activities that improve fitness and overall wellness.</p>
-            </div>
-            <div class="tip">
-                <h3>Prioritize Mental Health</h3>
-                <p>Well-being is not just physical; it’s also mental. We offer tips and insights on reducing stress, practicing mindfulness, and nurturing mental health for a balanced life.</p>
+                <h3>Meal Preps</h3>
+                <p>Plan your meals efficiently with our Meal Preps suggestions. We offer ideas for a balanced breakfast, lunch, and dinner to simplify your day.</p>
+                <button id="openModalMealPreps">View Meal Plans</button>
             </div>
         </div>
 
@@ -120,8 +186,75 @@
         </div>
     </section>
 
-    <script src="../js/navbar.js"></script>
+    <!-- Modals -->
+    <div id="modalCategories" class="modal">
+        <div class="modal-content">
+            <h4>Balanced Meal Categories</h4>
+            <ul>
+                <li>Sugar-Free Meals</li>
+                <li>Fat-Free</li>
+                <li>Protein-Packed</li>
+                <li>Gluten-Free</li>
+                <li>Low-Carb Options</li>
+            </ul>
+            <button id="closeModalCategories">Close</button>
+        </div>
+    </div>
 
+    <div id="modalMealPreps" class="modal">
+        <div class="modal-content">
+            <h4>Meal Preps Suggestions</h4>
+            <ul>
+                <li><b>Breakfast:</b> Overnight oats with fruits and nuts</li>
+                <li><b>Lunch:</b> Grilled chicken salad with avocado</li>
+                <li><b>Dinner:</b> Steamed fish with roasted vegetables</li>
+            </ul>
+            <button id="closeModalMealPreps">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Modal për kategoritë
+        const modalCategories = document.getElementById('modalCategories');
+        const openModalCategories = document.getElementById('openModalCategories');
+        const closeModalCategories = document.getElementById('closeModalCategories');
+
+        openModalCategories.addEventListener('click', () => {
+            modalCategories.style.display = 'block';
+        });
+
+        closeModalCategories.addEventListener('click', () => {
+            modalCategories.style.display = 'none';
+        });
+
+        // Modal për meal preps
+        const modalMealPreps = document.getElementById('modalMealPreps');
+        const openModalMealPreps = document.getElementById('openModalMealPreps');
+        const closeModalMealPreps = document.getElementById('closeModalMealPreps');
+
+        openModalMealPreps.addEventListener('click', () => {
+            modalMealPreps.style.display = 'block';
+        });
+
+        closeModalMealPreps.addEventListener('click', () => {
+            modalMealPreps.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target == modalCategories) {
+                modalCategories.style.display = 'none';
+            }
+            if (e.target == modalMealPreps) {
+                modalMealPreps.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="../js/navbar.js"></script>
 </body>
 </html>
+
+
+
+
+
 

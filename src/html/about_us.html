@@ -114,47 +114,62 @@
         color:#566573;
     }
     .personi1{
-        display: flex;
-    }
-    .personi1 img{
-        width: 200px;
-        height: 200px;
-        border-radius: 100px;
-        margin-left: 300px;
-    }
-    .teksti4{
-        width: 750px;
-        margin-left: 400px;
-    }
-    .teksti1{
-        margin-left: 250px;
-    }
-    .teksti2{
-        color: #424949;
-    }
-    .teksti5{
-        margin-left: 10px;
-        color: #424949;
-    }
-    .details{
-        width: 600px;
-        margin-left: 40px;
-        margin-top: 10px;
-    }
-    .h11{
-        color:#4a235a;
-        font-size: 20px;
-        font-family: "Outfit", serif;
-    }
-    #shfaq{
-        display: none;
-    }
-    #ourteam{
-        margin-left: 215px;
-        color: #424949;
-    }
-  
-</style>
+            display: flex;
+        }
+        .personi2{
+            display: flex;
+        }
+        .personi1 img{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin-left: 300px;
+        }
+        .personi2 img{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin-left: 300px;
+        }
+        .teksti4{
+            width: 750px;
+            margin-left: 400px;
+        }
+        .teksti1{
+            margin-left: 250px;
+        }
+        .teksti2{
+            color: #424949;
+        }
+        .teksti5{
+            margin-left: 10px;
+            color: #424949;
+        }
+        .details{
+            width: 600px;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+      
+        .h11{
+            color:#4a235a;
+            font-size: 20px;
+            font-family: "Outfit", serif;
+        }
+       
+        #shfaq{
+            display: none;
+        }
+        #shfaq1{
+            display: none;
+        }
+      
+        #ourteam{
+            margin-left: 215px;
+            color: #424949;
+        }
+      
+    </style>
 </head>
 <body>
 <div id="navbar-placeholder"></div>
@@ -218,34 +233,29 @@
                 dog Sage, and daughter Solvi.<br><button id="hide">Show Less</button>
             </p>
             <button id="show">
-                <p>Read more<i class='bx bx-chevron-right'></i></p>
+                <p>Read more</p>
             </button>
             
         </div>
     </div>
 
-    <div class="personi1">
+    <div class="personi2">
         <img src="../../assets/images/njeri1.jpg">
-        <div class="details"> 
+        <div class="details">
             <h1 class="h11">JAMES</h1>
-            <p>James is the chief tech consultant / business advisor / taste tester at Home Cooking. Day-to-day,
-                 you’ll mostly see him around Food Blogger Pro, as well as hosting the Food Blogger Pro podcast. 
-                 James is also husband to Lindsay, and lives in Minnesota with their dog Sage. 
-                 He can usually be found with a coffee in hand.</p>
-    
-                <button id="show">
-                <p>Read more<i class='bx bx-chevron-right'></i></p>
-                </button>
-            <p id="shfaq">dddddddddddddddddddddddddddddd</p>
-            <button id="hide" style="display: none;">Show Less</button>
-            
+            <p>
+                James is the chief tech consultant / business advisor / taste tester at Home Cooking.
+            </p>
+            <p id="shfaq1">
+                Day-to-day,you’ll mostly see him around Food Blogger Pro, as well as hosting the Food Blogger Pro podcast. 
+                James is also husband to Lindsay, and lives in Minnesota with their dog Sage. 
+                He can usually be found with a coffee in hand.<br><button id="hide1">Show Less</button>
+            </p>
+            <button id="show1">
+                <p>Read More</p>
+            </button>
         </div>
     </div>
-
-
-
-</div>
-
 <br><br><br><br><br><br><br><br><br>
 
 <script src="../js/navbar.js"></script>
@@ -256,31 +266,48 @@
 <script type="text/javascript">
 
 $(document).ready(function () {
-  
-  function shfaq_heq(action) {
-    if (action === 'show') {
-      $('#shfaq').show();          
-      $('#show').hide();       
-      $('#hide').show();       
-    } else if (action === 'hide') {
-      $('#shfaq').hide();          
-      $('#hide').hide();       
-      $('#show').show();      
-    }
-  }
+      
+      function shfaq_heq(action) {
+        if (action === 'show') {
+          $('#shfaq').show();          
+          $('#show').hide();       
+          $('#hide').show();       
+        } else if (action === 'hide') {
+          $('#shfaq').hide();          
+          $('#hide').hide();       
+          $('#show').show();      
+        }
+      }
+      
+      $('#show').click(function () {
+        shfaq_heq('show'); 
+      });
 
-  
-  $('#show').click(function () {
-    shfaq_heq('show'); 
-  });
+      $('#hide').click(function () {
+        shfaq_heq('hide'); 
+      });
+ });
 
-  
-  $('#hide').click(function () {
-    shfaq_heq('hide'); 
-  });
-});
+ $(document).ready(function () {
+      
+      function heq_shfaq(action) {
+        if (action === 'show1') {
+          $('#shfaq1').show();          
+          $('#show1').hide();       
+          $('#hide1').show();       
+        } else if (action === 'hide1') {
+          $('#shfaq1').hide();          
+          $('#hide1').hide();       
+          $('#show1').show();      
+        }
+      }
+      
+      $('#show1').click(function () {
+        heq_shfaq('show1'); 
+      });
 
-
-
-</script>
-</html>
+      $('#hide1').click(function () {
+        heq_shfaq('hide1'); 
+      });
+ });
+       
