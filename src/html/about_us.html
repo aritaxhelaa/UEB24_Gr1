@@ -281,6 +281,67 @@
             font-size: 16px;
             color: #566573;
         }
+/* Pjesa e Meet Our Team */
+#team h2 {
+    font-size: 22px;
+    color: rgb(236, 167, 83); /* Ngjyra e titujve të Meet Our Team */
+    font-family: "Playfair Display", serif;
+    margin-bottom: 20px; /* Hapësirë pas titullit */
+}
+
+/* Pjesa e përshkrimit të Meet Our Team */
+#team p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #566573;
+    margin-bottom: 30px; /* Hapësirë mes paragrafëve dhe seksionit tjetër */
+}
+
+/* Rregullimi për anëtarët */
+.team-members {
+    display: flex;
+    flex-direction: column; /* Radhitje vertikale */
+    align-items: center; /* Qendron anëtarët në qendër */
+    gap: 40px; /* Hapësirë midis anëtarëve */
+    margin-top: 20px; /* Hapësirë midis paragrafit dhe anëtarëve */
+}
+
+/* Rregullimi i çdo anëtari */
+.team-member {
+    text-align: center; /* Qendron teksti */
+    width: 100%;
+}
+
+/* Rregullimi i fotove të anëtarëve */
+.team-photo {
+    width: 150px; /* Gjerësia e fotos */
+    height: 150px; /* Lartësia e fotos */
+    border-radius: 50%; /* Formë rrethore */
+    object-fit: cover; /* Siguron që fotoja të mos deformohet */
+    margin-bottom: 15px; /* Hapësirë nën foto */
+}
+
+/* Rregullimi i titujve të anëtarëve */
+.team-member h3 {
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    color: rgb(236, 167, 83);
+}
+
+/* Rregullimi i përshkrimeve të anëtarëve */
+.team-member p {
+    font-size: 14px;
+    color: #566573;
+    line-height: 1.6;
+}
+
+
+   
+
+
+  
+         
+
     </style>
 </head>
 <body>
@@ -308,6 +369,7 @@
             <li><a href="#history">Our History</a></li>
             <li><a href="#mission">Our Mission</a></li>
             <li><a href="#team">Meet Our Team</a></li>
+            <li><a href="#book">Book</a></li>
             <li><a href="#feedback">Feedback</a></li>
             <li><a href="#email-updates">Email Updates</a></li>
             <li><a href="#contact-us">Contact Us</a></li>
@@ -344,12 +406,40 @@
             </div>
         </div>
 
-        <!-- Seksioni i Meet Our Team -->
-        <div class="content-section" id="team">
-            <h2>Meet Our Team</h2>
-            <p>We are a group of passionate individuals who come together to bring you the best content and recipes. We love food, we love cooking, and we love sharing our passion with you!</p>
-            <p>Our team consists of experienced chefs, food writers, nutritionists, and photographers who work tirelessly to create the most delicious and healthy recipes just for you.</p>
+  <!-- Seksioni i Meet Our Team -->
+<div class="content-section" id="team">
+    <h2>Meet Our Team</h2>
+    <p>Our team is made up of passionate and dedicated individuals, each contributing in their own unique way to bring the best of Home Cooking to life. From culinary experts to content specialists and management, we work together to deliver creative recipes and valuable information to our community. We are committed to providing endless opportunities to create delicious dishes and to offer an unforgettable experience for every visitor to our site.</p>
+
+    <!-- Fotot dhe Përshkrimet e Anëtarëve -->
+    <div class="team-members">
+        <div class="team-member">
+            <img src="../../assets/images/teamMember1.png" alt="Anëtari 1" class="team-photo">
+            <h3>John Doe</h3>
+            <p>John is our head chef, with over 10 years of experience in the culinary industry. He leads our kitchen with creativity and precision.</p>
         </div>
+        <div class="team-member">
+            <img src="../../assets/images/teamMember2.png" alt="Anëtari 2" class="team-photo">
+            <h3>Jane Smith</h3>
+            <p>Jane is our nutritionist, ensuring that all our recipes are not only delicious but also nutritious and balanced for our community.</p>
+        </div>
+        <div class="team-member">
+            <img src="../../assets/images/teamMember3.png" alt="Anëtari 3" class="team-photo">
+            <h3>Mary Johnson</h3>
+            <p>Mary is our content manager, working behind the scenes to organize and present recipes in a way that’s easy and enjoyable to follow.</p>
+        </div>
+    </div>
+</div>
+
+
+   
+
+<!-- Seksioni i Libri -->
+<div class="content-section" id="book">
+    <h2>Book</h2>
+    <p>Our cookbook is a collection of our best and most beloved recipes, carefully curated to bring you the finest dishes straight from our kitchen. Whether you're a beginner or a seasoned chef, our cookbook will guide you through easy-to-follow recipes that will inspire you to get creative in your own kitchen.You can <a href="book.html">click here</a> to get your copy of the book and start cooking today!</p>
+</div>
+
 
         <!-- Seksioni i Feedback -->
         <div class="feedback-section" id="feedback">
