@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!--Box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="../css/navbar.css">
 
@@ -41,14 +43,29 @@
             margin-left: 50px;
             margin-right: 0;
             padding-right: 0;
-
         }
         #hr3{
             border: 1px solid rgb(220, 208, 219);
             width: 1050px;
             margin-left: 50px;
             margin-right: 0;
-            padding-right: 0;}
+            padding-right: 0;
+        }
+        #hr4{
+            border: 2px solid rgb(220, 208, 219);
+            width: 1050px;
+            margin-left: 50px;
+            margin-right: 0;
+            padding-right: 0;
+        }
+        #hr5{
+            border: 1px solid rgb(220, 208, 219);
+            width: 1050px;
+            margin-left: 50px;
+            margin-right: 0;
+            padding-right: 0;
+
+        }
 
         #p1 {
             text-align: center;
@@ -124,6 +141,17 @@
             margin-left: 165px;
            
         }
+        .dyvija1{
+            display: flex;
+            margin-right: 165px;
+            margin-left: 165px;
+        }
+        #htc1{
+            font-family: "Outfit", serif;
+            font-size: 28px;
+            margin-left: 60px;
+            width: 195px;
+        }
         #htc{
             font-family: "Outfit", serif;
             font-size: 28px;
@@ -133,6 +161,9 @@
            
             font-family: "Outfit", serif;
         }
+        #dyvija1{
+            margin-top:33px;
+        }
         #dyvija{
             margin-top: 33px;
         }
@@ -140,6 +171,30 @@
             width: 300px;
             height: 300px;
             border-radius:11px ;
+        }
+        #howtocook5{
+            width: 300px;
+            height: 300px;
+            border-radius: 11px;
+            margin-left: 20px;
+        }
+        #howtocook6{
+            width: 300px;
+            height: 300px;
+            border-radius: 11px;
+            margin-left: 44px;
+        }
+        #howtocook7{
+            width: 300px;
+            height: 300px;
+            border-radius: 11px;
+            margin-left: 44px;
+        }
+        #howtocook8{
+            width: 300px;
+            height: 300px;
+            border-radius: 11px;
+            margin-left: 44px;
         }
         #howtocook2{
             width: 300px;
@@ -156,13 +211,18 @@
             height: 300px;
             border-radius:11px ;
         }
-        .images_fotot{
+        .images_fotot, .images_fotot1{
             display: flex;
             justify-content: space-around;
             margin-right: 160px;
             margin-left: 160px;
         }
         #tekst{
+            font-family: "Outfit", serif;
+            text-align: center;
+            font-size: 18px;
+        }
+        #tekst1{
             font-family: "Outfit", serif;
             text-align: center;
             font-size: 18px;
@@ -255,6 +315,39 @@
             height: 300px;
             border-radius:11px ;
         }
+        #myImage{
+            width: 1200px;
+            height: 600px;
+        }
+        .image-slide{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        #arrow-left, #arrow-right{
+            margin-top: 11px;
+            margin-left: 12px;
+            font-size: 25;
+        }
+        .arrow-left, .arrow-right{
+            background-color:rgb(240, 240, 239);
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            margin-top:300px;
+        }
+        .arrow-left{
+            margin-right: 30px;
+        }
+        .arrow-right{
+            margin-left: 30px;
+        }
+        #paragrafi1{
+            text-align: center;
+            font-size: 26px;
+            font-family: "Outfit", serif;
+        }
     
 
 
@@ -263,11 +356,31 @@
 </head>
 <body>
 
- 
-
     <div id="navbar-placeholder"></div>
-    <hr id="hr1"> 
+
+    <!--------------------------------------->
+
     <p id="p1"><b>SIPMLE RECIPES MADE FOR</b> <span id="span1"> real,  actual,  everyday life.</span></p>
+
+    <div class="image-slide">
+        <div class="arrow-left" onclick="left()">
+            <div id="arrow-left">
+                <i class='bx bx-left-arrow-alt'></i>
+            </div>
+        </div>
+        <img id="myImage" src="../../assets/images/simage1.jpg" alt="Default Image">
+        <div class="arrow-right" onclick="right()">
+            <div id="arrow-right">
+                <i class='bx bx-right-arrow-alt'></i>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------------------->
+
+    <hr id="hr1">
+    <p id="paragrafi1"><b>EXPLORE QUICK AND EASY RECIPES</b></p> 
+
     <div class="div1">
         <div class="images">
             <div id="div2">
@@ -294,20 +407,20 @@
                     <h1 id="titulli2">DINNER</h1>
                 </div>
             </div>
-           
         </div>
-
     </div>
 
-<div class="dyvija">
-    <p id="htc"><b>How To Cook</b></p>
-<div id="dyvija">
-    <hr id="hr2">
-    <hr id="hr3"> 
-</div>
-</div>
+    <!--------------------------------------------->
 
-<div>
+    <div class="dyvija">
+        <p id="htc"><b>How To Cook</b></p>
+    <div id="dyvija">
+        <hr id="hr2">
+        <hr id="hr3"> 
+    </div>
+    </div>
+
+    <div>
     <div class="images_fotot">
         <div class="images_howtocook1">
             <img id="howtocook1" src="../../assets/images/howtocook1.jpg">
@@ -326,55 +439,47 @@
             <p id="tekst">The Goof-Proof Way to Proof Yeast</p>
         </div>
     </div>
-</div>
+    </div>
 
+    <!--------------------------------------------->
 
-<div class="dyvija">
-    <p id="htc"><b>Air Fryer</b></p>
-<div id="dyvija">
-    <hr id="hr2">
-    <hr id="hr3"> 
-</div>
-</div>
+    <div class="dyvija1">
+        <p id="htc1"><b>Air Fryer</b></p>
+    <div id="dyvija1">
+        <hr id="hr4">
+        <hr id="hr5"> 
+    </div>
+    </div>
 
-
-<div>
-    <div class="images_fotot">
+    <div>
+    <div class="images_fotot1">
         <div>
-            <img id="airfryer1" src="../../assets/images/airfryer1.jpg">
-            <p id="tekst">The 45 Best Air-Fryer Recipes to Make in 2024</p>
+            <img id="howtocook5"  id="airfryer1" src="../../assets/images/airfryer1.jpg">
+            <p id="tekst1">The 45 Best Air-Fryer Recipes to Make in 2024</p>
         </div>
         <div>
-            <img id="airfryer2" src="../../assets/images/airfryer2.jpg">
-            <p id="tekst">How Does an Air Fryer Work?</p>
+            <img id="howtocook6" id="airfryer2" src="../../assets/images/airfryer2.jpg">
+            <p id="tekst1">How Does an Air Fryer Work?</p>
         </div>
         <div>
-            <img id="airfryer3" src="../../assets/images/airfryer3.jpg">
-            <p id="tekst">Air-Fryer Potato Chips</p>
+            <img id="howtocook7" id="airfryer3" src="../../assets/images/airfryer3.jpg">
+            <p id="tekst1">Air-Fryer Potato Chips</p>
         </div>
         <div> 
-            <img id="airfryer4" src="../../assets/images/airfryer4.jpg">
-            <p id="tekst">This Chart Shows You the Air-Fryer Cooking Times for Your Favorite Foods</p>
+            <img id="howtocook8" id="airfryer4" src="../../assets/images/airfryer4.jpg">
+            <p id="tekst1">This Chart Shows You the Air-Fryer Cooking Times for Your Favorite Foods</p>
         </div>
     </div>
-</div>
+    </div>
 
+    <!------------------------------------>
 
-
-
-
-
-
-
-
-
-<!------------------------------------>
-<div class="receta">
+    <div class="receta">
     <div id="receta1">
         <p id="pp1"><b>THE LATEST & GREATEST</b></p>
 
         <div class="receta2">
-            <img id="imgreceta1" src="../../assets/images/receta1.webp">
+            <img onclick="openFullImg(this.src)" id="imgreceta1" src="../../assets/images/receta1.webp">
             <div id="receta2">
                 <p id="tekst1"><b>December 19, 2024</b></p>
                 <p id="tekst2"><b>Gingery Cranberry Salsa</b></p>
@@ -413,35 +518,37 @@
         <hr id="hrr1">
 
     </div>
-
-    <div>
-
     </div>
 
-</div>
+    <!--------------------------------------->
 
 
+<script>
+    var imageIndex=0;
+    var imageArray = [
+        "../../assets/images/simage1.jpg",
+        "../../assets/images/simage2.jpg",
+        "../../assets/images/simage3.jpg",
+        "../../assets/images/simage4.jpg"
+    ];
+    function showImage(index){
+        var image = document.getElementById("myImage");
+        image.src=imageArray[index];
+        image.alt = "Image " + (index + 1);
+    };
+    function left(){
+        imageIndex=(imageIndex-1+ imageArray.length) % imageArray.length;
+        showImage(imageIndex);
+    };
+    function right(){
+        imageIndex = (imageIndex + 1) % imageArray.length;
+        showImage(imageIndex);
+    };
+</script>
 
 
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br><br><br><br><br><br><br><br>
-    
-
-
-
-
-
-    <script src="../js/navbar.js"></script>
-  </body>
+<script src="../js/navbar.js"></script>
+</body>
 </html>
 
 
