@@ -7,521 +7,262 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
+
+    
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-    <!-- Box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/navbar.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/navbar.css">
+<!--Box icons-->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
     <style>
-        /* Pjesa kryesore */
-        .content-section {
+        .about{
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            margin-bottom: 40px;
+        }
+        .menu{
+            position: fixed;
+            width:200px;
+            height:100%;
+            background-color:#d2b4de;
+        }
+      #of{
+            font-size: 20px;
+        }  
+       #logostyle{
+            font-family: "Dancing Script", serif;
+            font-size: 40px;
+            color:rgb(154, 140, 155)
         }
 
-        #foto1 {
-            max-width: 300px;
-            height: auto;
-            margin-right: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
 
-        .aboutus3 {
-            flex-grow: 1;
+        .div_aboutus{
+            background-color:rgb(248, 246, 248) ;
         }
-
-        #tekst2, #tekst3 {
-            font-size: 22px;
-            color: rgb(236, 167, 83);
-            font-family: "Playfair Display", serif;
+        .div_au2{
+            position: static;
+            background-color:rgb(239, 232, 238);
+            width: 170px;
         }
-
-        #tekst5 {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #566573;
+        .aboutus{
+            background-color:rgb(240, 240, 239);
+            display: flex;
         }
-
-        /* Titujt tjerë */
-        h2 {
-            font-size: 22px;
-            color: rgb(236, 167, 83);
-            font-family: "Playfair Display", serif;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #566573;
-        }
-
-        /* Pjesa anësore */
-        .side-menu {
-            width: 250px;
-            background-color: #f8f8f8;
-            padding: 20px;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0; /* Sticky fillon nga maja e faqes */
-        }
-
-        .side-menu ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .side-menu ul li {
-            margin-bottom: 15px;
-        }
-
-        .side-menu ul li a {
-            text-decoration: none;
-            font-size: 16px;
-            color: #333;
-            font-family: "Outfit", sans-serif;
-        }
-
-        .side-menu ul li a:hover {
-            color: rgb(236, 167, 83);
-        }
-
-        /* Përmbajtja e faqes */
-        .main-content {
-            margin-left: 280px; /* Hapësirë për menunë anësore */
-            padding: 20px;
-        }
-
-        /* Pjesa e Signup email */
-        .signup-section {
-            background-color: #f8f8f8;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .signup-section h2 {
-            font-size: 22px;
-            color: rgb(236, 167, 83);
-            font-family: "Playfair Display", serif;
-            margin-bottom: 10px;
-        }
-
-        .signup-section form input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .signup-section form input[type="submit"] {
-            background-color: rgb(236, 167, 83);
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .signup-section form input[type="submit"]:hover {
-            background-color: #e6975c;
-        }
-
-        /* Pjesa e Feedback */
-        .feedback-section {
-            background-color: #f8f8f8;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .feedback-section h2 {
-            font-size: 22px;
-            color: rgb(236, 167, 83);
-            font-family: "Playfair Display", serif;
-            margin-bottom: 10px;
-        }
-
-        .feedback-section p {
-            font-size: 16px;
-            color: #566573;
+        #foto1{
+            height:570px;
+            margin-left:190px;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
-
-        .feedback-section form .yes-no-buttons {
+        .aboutus2{
             display: flex;
-            justify-content: center;
-            margin-bottom: 15px;
+            margin-top:10px;
+            margin-bottom:0;
+            margin-left: 0;
         }
-
-        .feedback-section form .yes-no-buttons input[type="radio"] {
-            display: none;
-        }
-
-        .feedback-section form .yes-no-buttons label {
-            background-color: rgb(236, 167, 83);
-            color: white;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin: 0 10px;
-        }
-
-        .feedback-section form .yes-no-buttons label:hover {
-            background-color: #e6975c;
-        }
-
-        .feedback-section form .yes-no-buttons input:checked + label {
-            background-color: #e6975c;
-        }
-
-        .feedback-section form .star-rating {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-
-        .feedback-section form .star-rating input {
-            display: none;
-        }
-
-        .feedback-section form .star-rating label {
-            font-size: 30px;
-            color: #ccc;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .feedback-section form .star-rating input:checked ~ label {
-            color: rgb(236, 167, 83);
-        }
-
-        .feedback-section form .star-rating input:hover ~ label {
-            color: rgb(236, 167, 83);
-        }
-
-        .feedback-section form input[type="submit"] {
-            background-color: rgb(236, 167, 83);
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .feedback-section form input[type="submit"]:hover {
-            background-color: #e6975c;
-        }
-
-        /* Contact Us Section */
-        .contact-section {
-            background-color: #f8f8f8;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-section h2 {
-            font-size: 22px;
-            color: rgb(236, 167, 83);
-            font-family: "Playfair Display", serif;
-        }
-
-        .contact-section p {
-            font-size: 16px;
-            color: #566573;
-        }
-
-        .contact-section a {
+        #linku1{
+            margin-top:14px;
             text-decoration: none;
-            font-size: 16px;
-            color: #566573;
-            font-family: "Outfit", sans-serif;
+            color:#212f3d;
+            font-size: 13.5px;
+            font-family: "Outfit", serif;
+            margin-left: 0;
         }
-
-        .contact-section a:hover {
-            color: rgb(236, 167, 83);
+        #teksti1{
+            margin-left:0;
+            font-size: 13.5px;
+            font-family: "Outfit", serif;
         }
-
-        /* Stili për metodat e kontaktit */
-        .contact-methods {
+        .aboutus3{
+            margin-left: 130px;
+            width: 500px;
+        }
+        #tekst2{
+            font-size: 55px;
+            margin-top: 0;
+            font-family: "Playfair Display", serif;
+            color:  rgb(236, 167, 83);
+            margin-left:0;
+            margin-bottom: 0;
+        }
+        #tekst3{
+            font-size: 20px;
+            margin-top:20px;
+        }
+        #tekst4{
+            font-family: "Dancing Script", serif;
+            font-size: 35px;
+            margin-top: -2px;
+            color: #808b96;
+        }
+        #tekst5{
+            font-family: "Outfit", serif;
+            font-size: 17px;
+            color:#566573;
+        }
+        .personi1{
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
         }
-
-        .method {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .personi1 img{
+            width: 250px;
+            height: 250px;
+            border-radius: 125px;
+            margin-left: 300px;
         }
-
-        .method i {
-            font-size: 24px;
-            color: rgb(236, 167, 83);
+        .teksti4{
+            width: 750px;
+            margin-left: 400px;
         }
-
-        .method p {
-            font-size: 16px;
-            color: #566573;
+        .teksti1{
+            margin-left: 250px;
         }
-/* Pjesa e Meet Our Team */
-#team h2 {
-    font-size: 22px;
-    color: rgb(236, 167, 83); /* Ngjyra e titujve të Meet Our Team */
-    font-family: "Playfair Display", serif;
-    margin-bottom: 20px; /* Hapësirë pas titullit */
-}
-
-/* Pjesa e përshkrimit të Meet Our Team */
-#team p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #566573;
-    margin-bottom: 30px; /* Hapësirë mes paragrafëve dhe seksionit tjetër */
-}
-
-/* Rregullimi për anëtarët */
-.team-members {
-    display: flex;
-    flex-direction: column; /* Radhitje vertikale */
-    align-items: center; /* Qendron anëtarët në qendër */
-    gap: 40px; /* Hapësirë midis anëtarëve */
-    margin-top: 20px; /* Hapësirë midis paragrafit dhe anëtarëve */
-}
-
-/* Rregullimi i çdo anëtari */
-.team-member {
-    text-align: center; /* Qendron teksti */
-    width: 100%;
-}
-
-/* Rregullimi i fotove të anëtarëve */
-.team-photo {
-    width: 150px; /* Gjerësia e fotos */
-    height: 150px; /* Lartësia e fotos */
-    border-radius: 50%; /* Formë rrethore */
-    object-fit: cover; /* Siguron që fotoja të mos deformohet */
-    margin-bottom: 15px; /* Hapësirë nën foto */
-}
-
-/* Rregullimi i titujve të anëtarëve */
-.team-member h3 {
-    font-size: 18px;
-    font-family: "Playfair Display", serif;
-    color: rgb(236, 167, 83);
-}
-
-/* Rregullimi i përshkrimeve të anëtarëve */
-.team-member p {
-    font-size: 14px;
-    color: #566573;
-    line-height: 1.6;
-}
-
-
-   
-
-
-  
-         
-
+        .teksti5{
+            margin-left: 10px;
+        }
+        .details{
+            width: 600px;
+            margin-left: 40px;
+            margin-top: 25px;
+        }
+        .h11{
+            color:#4a235a;
+            font-size: 20px;
+            font-family: "Outfit", serif;
+        }
+        #shfaq{
+            display: none;
+        }
+        #ourteam{
+            margin-left: 215px;
+        }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="background">
-        <div class="logo">
-            <p id="logoo"><b id="homee">Home</b><span id="logostyle">Cooking</span></p>
+    <div id="navbar-placeholder"></div>
+
+    <!--------------------------------------->
+  
+    <div class="aboutus">
+        <div>
+            <img id="foto1" src="../../assets/images/aboutus1.webp">
         </div>
-        <div id="list">
-            <ul class="list">
-                <li><a href="../html/home.html">HOME</a></li>
-                <li><a href="../html/recipes.html">RECIPES</a></li>
-                <li><a href="../html/book.html">BOOK</a></li>
-                <li><a href="../html/about_us.html">ABOUT US</a></li>
-                <li><a href="healthWellness.html">HEALTH & WELLNESS</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Menuja anësore -->
-    <div class="side-menu">
-        <ul>
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#history">Our History</a></li>
-            <li><a href="#mission">Our Mission</a></li>
-            <li><a href="#team">Meet Our Team</a></li>
-            <li><a href="#book">Book</a></li>
-            <li><a href="#feedback">Feedback</a></li>
-            <li><a href="#email-updates">Email Updates</a></li>
-            <li><a href="#contact-us">Contact Us</a></li>
-        </ul>
-    </div>
-
-</nav>
-<div class="aboutus">
-   
-
-    <!-- Përmbajtja kryesore -->
-    <div class="main-content">
-        <!-- Seksioni i parë -->
-        <div class="content-section" id="about-us">
-            <div>
-                <img id="foto1" src="../../assets/images/aboutus1.webp" alt="Jessica's Photo">
+        <div class="aboutus3">
+            <div class="aboutus2">
+                <a id="linku1" href="../html/home.html">HOME COOKING <i id="right" class='bx bx-chevron-right'></i></a>
+                <p id="teksti1">ABOUT US</p>
             </div>
-            <div class="aboutus3">
-                <p id="tekst2"><b>About Me</b></p>
-                <p id="tekst3"><b>HI, MY NAME IS </b> <span id="tekst4">  Jessica!</span></p>
-                <p id="tekst5">
-                    And Home Cooking is my little corner of the internet!
-                    <br>
-                    <br>
-                    I'm the voice, author, and creator behind Home Cooking. What started as a casual hobby over 14 years 
-                    ago in 2010 while I was working as a fourth grade teacher has now grown into a full-blown business (!!)
-                    that reaches millions of people with fun recipes each month, with content that has been featured on 
-                    The Kitchn, CNN, Refinery29, Brit + Co, POPSUGAR, Huffington Post, The Everymom, PureWow, and more.
-                    <br>
-                    <br>
-                    I live in Saint Paul, MN with my husband Bjork and our dog Sage. My favorite things in life are a big
-                    plate of pad Thai, sunny days, and going to the dog park.
-                </p>
+            <p id="tekst2"><b>About Us</b></p>
+            <p id="tekst3">Who We Are?</p>
+            <p id="tekst5">
+                Food happens to us—every single day. It bumps up against everything else we care about: family, 
+                health, budget, schedule…and our happiness. 
+                <br>
+                <br>
+                Fellow cooks, we see you because we’re not just food editors, we are you. 
+                Sure, we’ve worked in publishing, restaurant kitchens, TV studios, grocery stores, 
+                and meal kit companies. But we’re also parents, dog-walkers, commuters, shoppers, 
+                homeowners—people who love food as much as we need it, just like you.
+                <br>
+                <br>
+                We are that reliable friend who cooks with you by your side, showing you exactly how a recipe plays out, 
+                step by step. We’re answering your questions. We’re here when you need a soft boiled egg, 
+                when you’re perfecting pilau, when you’re on a budget and throwing a party anyways, when you’re 
+                11 and you need a snack, when you’ve just moved in with vegans, when someone gives you an Instant Pot, 
+                and when you’re pledging to eat less of this and more of that. We want you to be the first one invited to 
+                the potluck.
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <!------------------------------------------>
+
+    <div>
+        <div class="teksti4">
+        <h1 class="teksti1">Meet the Team</h1>
+        <p class="teksti2">
+        We have an entire team of geniuses behind us at Pinch of Yum who are experts in a little bit of everything
+        -from <span class="teksti5">customer service, to social media, to videography, to assisting with recipe shoots. They are EVERYTHING.</span>
+        </p>
+        <p id="ourteam">Our team helps keep it all running smoothly.</p>
+        </div>
+
+        <div class="personi1">
+            <img src="../../assets/images/njeri.webp">
+            <div class="details"> 
+                <h1 class="h11">LINDSAY</h1>
+                <p>Lindsay is the voice, author, and creator behind Pinch of Yum. 
+                She develops recipes and writes content for the blog and on Instagram. 
+                The little blog that started as her casual hobby for nights and weekends while working as 
+                a teacher has now grown into a full-fledged business. She lives in Minnesota with her husband Bjork, 
+                dog Sage, and daughter Solvi.</p>
+                <p>Read more<i id="show" class='bx bx-chevron-right'></i></p>
+                <p id="shfaq">dddddddddddddddddddddddddddddd<br><span id="hide">Show Less</span></p>
+                
             </div>
         </div>
-
-  <!-- Seksioni i Meet Our Team -->
-<div class="content-section" id="team">
-    <h2>Meet Our Team</h2>
-    <p>Our team is made up of passionate and dedicated individuals, each contributing in their own unique way to bring the best of Home Cooking to life. From culinary experts to content specialists and management, we work together to deliver creative recipes and valuable information to our community. We are committed to providing endless opportunities to create delicious dishes and to offer an unforgettable experience for every visitor to our site.</p>
-
-    <!-- Fotot dhe Përshkrimet e Anëtarëve -->
-    <div class="team-members">
-        <div class="team-member">
-            <img src="../../assets/images/teamMember1.png" alt="Anëtari 1" class="team-photo">
-            <h3>John Doe</h3>
-            <p>John is our head chef, with over 10 years of experience in the culinary industry. He leads our kitchen with creativity and precision.</p>
-        </div>
-        <div class="team-member">
-            <img src="../../assets/images/teamMember2.png" alt="Anëtari 2" class="team-photo">
-            <h3>Jane Smith</h3>
-            <p>Jane is our nutritionist, ensuring that all our recipes are not only delicious but also nutritious and balanced for our community.</p>
-        </div>
-        <div class="team-member">
-            <img src="../../assets/images/teamMember3.png" alt="Anëtari 3" class="team-photo">
-            <h3>Mary Johnson</h3>
-            <p>Mary is our content manager, working behind the scenes to organize and present recipes in a way that’s easy and enjoyable to follow.</p>
-        </div>
     </div>
-</div>
 
+    <br><br><br><br><br><br><br><br><br>
 
-   
+<!---HIDE AND SHOW-->
 
-<!-- Seksioni i Libri -->
-<div class="content-section" id="book">
-    <h2>Book</h2>
-    <p>Our cookbook is a collection of our best and most beloved recipes, carefully curated to bring you the finest dishes straight from our kitchen. Whether you're a beginner or a seasoned chef, our cookbook will guide you through easy-to-follow recipes that will inspire you to get creative in your own kitchen.You can <a href="book.html">click here</a> to get your copy of the book and start cooking today!</p>
-</div>
-
-
-        <!-- Seksioni i Feedback -->
-        <div class="feedback-section" id="feedback">
-            <h2>Feedback/Review</h2>
-            <p>We would love to hear your thoughts!</p>
-            <form action="#" method="post">
-                <p>Would you visit us again?</p>
-                <div class="yes-no-buttons">
-                    <input type="radio" id="yes" name="visit_again" value="yes">
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="visit_again" value="no">
-                    <label for="no">No</label>
-                </div>
-
-                <p>Rate your experience</p>
-                <div class="star-rating">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5">★</label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4">★</label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3">★</label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2">★</label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1">★</label>
-                </div>
-
-                <input type="submit" value="Submit Feedback">
-            </form>
-        </div>
-
-        <!-- Seksioni i Signup Email -->
-        <div class="signup-section" id="email-updates">
-            <h2>Get Updates via Email</h2>
-            <form action="#">
-                <input type="email" name="email" placeholder="Enter your email to get the latest updates" required>
-                <input type="submit" value="Subscribe">
-            </form>
-        </div>
-<!-- Seksioni i Contact Us -->
-<div class="contact-section" id="contact-us">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or inquiries, feel free to contact us using the methods below:</p>
-    <div class="contact-methods">
-        <!-- Ikona e Telefonit -->
-        <div class="method">
-            <a href="tel:+1234567890">
-                <i class="bx bx-phone"></i>
-            </a>
-            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
-        </div>
-        
-        <!-- Ikona e Email-it -->
-        <div class="method">
-            <a href="mailto:homecooking@gmail.com">
-                <i class="bx bx-envelope"></i>
-            </a>
-            <p><a href="mailto:homecooking@gmail.com">homecooking@gmail.com</a></p>
-        </div>
-        
-        <!-- Ikona e Instagram-it -->
-        <div class="method">
-            <a href="https://www.instagram.com/homecooking" target="_blank">
-                <i class="bx bxl-instagram"></i>
-            </a>
-            <p><a href="https://www.instagram.com/homecooking" target="_blank"> @homecooking</a></p>
-        </div>
-        
-        <!-- Ikona e Adresës dhe Google Maps -->
-        <div class="method">
-            <a href="https://www.google.com/maps?q=123+Cooking+Street,+Saint+Paul,+MN" target="_blank">
-                <i class="bx bx-map"></i>
-            </a>
-            <p><a href="https://www.google.com/maps?q=123+Cooking+Street,+Saint+Paul,+MN" target="_blank">123 Cooking Street, Saint Paul, MN</a></p>
-
-        </div>
-    </div>
-</div>
+<!--<button id="hide">HIDE</button>-->
+    <!---<button id="show">SHOW</button>-->
+    <!----<p>HEY</p>--->
 
 
 
-    </div>
+
+
+  <script src="../js/navbar.js"></script>
 </body>
+  
+
+<!---jQUery funskioni i hide and show-->
+<script type="text/javascript">
+    /*$(document).ready(function(){
+        $("#hide").click(function(){
+            $("p").hide();
+        });
+        $("#show").click(function(){
+            $("p").show();
+        });
+    
+    });
+    */
+    $(document).ready(function(){
+        
+        $("#show").click(function(){
+            $("#shfaq").show();
+        });
+        $("#hide").click(function(){
+            $("#shfaq").hide();
+        });
+    
+    });
+
+
+
+   
+        
+</script>
+
+
+
 </html>
+
