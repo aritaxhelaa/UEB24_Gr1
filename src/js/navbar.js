@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="recipes.html">RECIPES</a></li>
                     <li><a href="book.html">BOOK</a></li>
                     <li><a href="about_us.html">ABOUT US</a></li>
-                    <li><a href="healthWellness.html">HEALTH & WELLNESS</a></li>
+                    <li><a href="healthandwellnes.html">HEALTH & WELLNESS</a></li>
                 </ul>
             </div>
         </nav>
