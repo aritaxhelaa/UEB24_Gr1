@@ -1,73 +1,169 @@
-
-const loginForm = document.querySelector('#loginForm');
-const registerForm = document.querySelector('#registerForm');
-const showRegister = document.getElementById('show-register');
-const showLogin = document.getElementById('show-login');
 document.getElementById("paymentForm").addEventListener("submit", function (e) {
-  e.preventDefault(); 
+  e.preventDefault();
 
-  const cardNumber = document.getElementById("card-number").value.trim();
-  const cvv = document.getElementById("cvv").value.trim();
-  const expiryMonth = document.getElementById("expiry-month").value;
-  const expiryYear = document.getElementById("expiry-year").value;
-  const email = document.getElementById("email").value.trim();
-  const firstName = document.getElementById("first-name").value.trim();
-  const lastName = document.getElementById("last-name").value.trim();
-  const address1 = document.getElementById("address1").value.trim();
-  const address2 = document.getElementById("address2").value.trim();
-  const city = document.getElementById("city").value.trim();
-  const state = document.getElementById("state").value;
-  const zipCode = document.getElementById("zip-code").value.trim();
+  try {
+    const formData = {
+      paymentMethod: document.querySelector('input[name="paymentMethod"]:checked')?.value,
+      
+      cardNumber: document.getElementById("card-number").value.replace(/[\s-]/g, '').trim(),
+      cvv: document.getElementById("cvv").value.trim(),
+      expiryMonth: document.getElementById("expiry-month").value,
+      expiryYear: document.getElementById("expiry-year").value,
+      
+      email: document.getElementById("email").value.replace(/[^a-zA-Z0-9@._-]/g, '').trim(),
+      firstName: document.getElementById("first-name").value.replace(/[^a-zA-Z\s]/g, '').trim(),
+      lastName: document.getElementById("last-name").value.replace(/[^a-zA-Z\s]/g, '').trim(),
+      
+      address1: document.getElementById("address1").value.trim(),
+      address2: document.getElementById("address2").value.trim(),
+      city: document.getElementById("city").value.replace(/[^a-zA-Z\s]/g, '').trim(),
+      state: document.getElementById("state").value,
+      zipCode: document.getElementById("zip-code").value.replace(/\D/g, '').trim(),
+      
+      saveInfo: document.getElementById("saveInfo").checked,
+      newsletter: document.getElementById("newsletter").checked,
+      promotions: document.getElementById("promotions").checked,
+      
+      terms: document.getElementById("terms").checked,
+      privacy: document.getElementById("privacy").checked
+    };
 
-  let isValid = true;
+    if (!formData.paymentMethod) {
+      throw new Error("Please select a payment method.");
+    }
 
-  if (!/^\d{16}$/.test(cardNumber)) {
-    alert("Invalid card number. It must be 16 digits.");
-    isValid = false;
-  }
+    const cardNumberMatch = formData.cardNumber.match(/\d{16}/);
+    if (!cardNumberMatch || cardNumberMatch[0] !== formData.cardNumber) {
+      throw new Error("Invalid card number. It must be 16 digits.");
+    }
 
-  if (!/^\d{3,4}$/.test(cvv)) {
-    alert("Invalid CVV. It must be 3 or 4 digits.");
-    isValid = false;
-  }
+    const cvvMatch = formData.cvv.match(/\d{3,4}/);
+    if (!cvvMatch || cvvMatch[0] !== formData.cvv) {
+      throw new Error("Invalid CVV. It must be 3 or 4 digits.");
+    }
 
-  if (expiryMonth === "" || expiryYear === "") {
-    alert("Please select expiry month and year.");
-    isValid = false;
-  }
+    if (formData.expiryMonth === "" || formData.expiryYear === "") {
+      throw new Error("Please select expiry month and year.");
+    }
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    alert("Invalid email address.");
-    isValid = false;
-  }
+    const today = new Date();
+    const cardDate = new Date(formData.expiryYear, formData.expiryMonth - 1);
+    if (cardDate < today) {
+      throw new Error("Card has expired.");
+    }
 
-  if (firstName === "" || lastName === "") {
-    alert("Please enter your first and last name.");
-    isValid = false;
-  }
+    const emailMatch = formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+    if (!emailMatch) {
+      throw new Error("Invalid email address.");
+    }
 
-  if (address1 === "") {
-    alert("Address 1 cannot be empty.");
-    isValid = false;
-  }
+    const nameRegex = /^[a-zA-Z\s]{2,}$/;
+    if (!formData.firstName.match(nameRegex)) {
+      throw new Error("First name must contain only letters and be at least 2 characters long.");
+    }
+    if (!formData.lastName.match(nameRegex)) {
+      throw new Error("Last name must contain only letters and be at least 2 characters long.");
+    }
 
-  if (city === "") {
-    alert("City cannot be empty.");
-    isValid = false;
-  }
+    if (formData.address1 === "") {
+      throw new Error("Address 1 cannot be empty.");
+    }
 
-  if (state === "") {
-    alert("Please select a state.");
-    isValid = false;
-  }
+    if (!formData.city.match(/^[a-zA-Z\s]{2,}$/)) {
+      throw new Error("City name must contain only letters and be at least 2 characters long.");
+    }
 
-  if (!/^\d{5,6}$/.test(zipCode)) {
-    alert("Invalid zip code. It must be 5 or 6 digits.");
-    isValid = false;
-  }
+    if (formData.state === "") {
+      throw new Error("Please select a state.");
+    }
 
-  if (isValid) {
+    const zipMatch = formData.zipCode.match(/^\d{5,6}$/);
+    if (!zipMatch) {
+      throw new Error("Invalid zip code. It must be 5 or 6 digits.");
+    }
+
+    if (!formData.terms) {
+      throw new Error("You must accept the Terms and Conditions.");
+    }
+    if (!formData.privacy) {
+      throw new Error("You must accept the Privacy Policy.");
+    }
+
+    if (formData.saveInfo) {
+      try {
+        const preferences = {
+          email: formData.email,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          address1: formData.address1,
+          address2: formData.address2,
+          city: formData.city,
+          state: formData.state,
+          zipCode: formData.zipCode,
+          newsletter: formData.newsletter,
+          promotions: formData.promotions
+        };
+        localStorage.setItem('userPreferences', JSON.stringify(preferences));
+      } catch (storageError) {
+        console.error("Error saving preferences:", storageError);
+      }
+    }
+
+    console.log("Form data validated successfully:", formData);
     alert("All fields are valid. Redirecting to home page...");
     window.location.href = "../html/home.html";
+
+  } catch (error) {
+    alert(error.message);
+    console.error("Validation error:", error);
+  }
+});
+
+
+document.getElementById("card-number").addEventListener("input", function(e) {
+  let value = e.target.value.replace(/\D/g, '');
+  value = value.replace(/(\d{4})/g, '$1 ').trim();
+  e.target.value = value.substring(0, 19); // 16 digits + 3 spaces
+});
+
+document.getElementById("cvv").addEventListener("input", function(e) {
+  e.target.value = e.target.value.replace(/\D/g, '').substring(0, 4);
+});
+
+document.getElementById("first-name").addEventListener("input", function(e) {
+  e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+});
+
+document.getElementById("last-name").addEventListener("input", function(e) {
+  e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+});
+
+document.getElementById("city").addEventListener("input", function(e) {
+  e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+});
+
+document.getElementById("zip-code").addEventListener("input", function(e) {
+  e.target.value = e.target.value.replace(/\D/g, '').substring(0, 6);
+});
+
+window.addEventListener('load', function() {
+  try {
+    const savedPreferences = localStorage.getItem('userPreferences');
+    if (savedPreferences) {
+      const preferences = JSON.parse(savedPreferences);
+      
+      Object.keys(preferences).forEach(key => {
+        const element = document.getElementById(key);
+        if (element) {
+          if (element.type === 'checkbox') {
+            element.checked = preferences[key];
+          } else {
+            element.value = preferences[key];
+          }
+        }
+      });
+    }
+  } catch (error) {
+    console.error("Error loading preferences:", error);
   }
 });

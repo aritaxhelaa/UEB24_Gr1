@@ -152,3 +152,41 @@ body {
   margin: auto;
 }
 
+.payment-methods {
+  margin: 20px 0;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.checkbox-group {
+  margin: 20px 0;
+}
+
+.checkbox-item {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.terms-group {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
