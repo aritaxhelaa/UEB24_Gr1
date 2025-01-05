@@ -155,6 +155,7 @@
             margin-left: 215px;
             color: #424949;
         }
+      
     </style>
 </head>
 <body>
@@ -211,19 +212,40 @@
             <img src="../../assets/images/njeri.webp">
             <div class="details"> 
                 <h1 class="h11">LINDSAY</h1>
-                <p>Lindsay is the voice, author, and creator behind Pinch of Yum. 
-                She develops recipes and writes content for the blog and on Instagram. 
-                The little blog that started as her casual hobby for nights and weekends while working as 
-                a teacher has now grown into a full-fledged business. She lives in Minnesota with her husband Bjork, 
-                dog Sage, and daughter Solvi.</p>
+                <p>Lindsay is the voice, author, and creator behind Home Cooking. 
+                </p>
+                <p id="shfaq">She develops recipes and writes content for the blog and on Instagram. 
+                    The little blog that started as her casual hobby for nights and weekends while working as 
+                    a teacher has now grown into a full-fledged business. She lives in Minnesota with her husband James, 
+                    dog Sage, and daughter Solvi.<br><button id="hide">Show Less</button>
+                </p>
+                <button id="show">
+                    <p>Read more<i class='bx bx-chevron-right'></i></p>
+                </button>
+                
+            </div>
+        </div>
+
+        <div class="personi1">
+            <img src="../../assets/images/njeri1.jpg">
+            <div class="details"> 
+                <h1 class="h11">JAMES</h1>
+                <p>James is the chief tech consultant / business advisor / taste tester at Home Cooking. Day-to-day,
+                     you’ll mostly see him around Food Blogger Pro, as well as hosting the Food Blogger Pro podcast. 
+                     James is also husband to Lindsay, and lives in Minnesota with their dog Sage. 
+                     He can usually be found with a coffee in hand.</p>
         
                     <button id="show">
                     <p>Read more<i class='bx bx-chevron-right'></i></p>
                     </button>
-                <p id="shfaq">dddddddddddddddddddddddddddddd<br><button id="hide">Show Less</button></p>
+                <p id="shfaq">dddddddddddddddddddddddddddddd</p>
+                <button id="hide" style="display: none;">Show Less</button>
                 
             </div>
         </div>
+
+
+
     </div>
 
     <br><br><br><br><br><br><br><br><br>
@@ -235,16 +257,32 @@
 <!---jQUery funskioni i hide and show-->
 <script type="text/javascript">
 
-    $(document).ready(function(){
-        
-        $("#show").click(function(){
-            $("#shfaq").show();
-        });
-        $("#hide").click(function(){
-            $("#shfaq").hide();
-        });
-    
+$(document).ready(function () {
+      
+      function shfaq_heq(action) {
+        if (action === 'show') {
+          $('#shfaq').show();          
+          $('#show').hide();       
+          $('#hide').show();       
+        } else if (action === 'hide') {
+          $('#shfaq').hide();          
+          $('#hide').hide();       
+          $('#show').show();      
+        }
+      }
+
+      
+      $('#show').click(function () {
+        shfaq_heq('show'); 
+      });
+
+      
+      $('#hide').click(function () {
+        shfaq_heq('hide'); 
+      });
     });
+
+    
 
 </script>
 </html>
