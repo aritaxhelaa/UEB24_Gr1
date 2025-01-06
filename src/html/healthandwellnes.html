@@ -3,255 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health and Wellness</title>
-
-    <!-- Linku për CSS -->
+    <title>Healthy Recipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/navbar.css">
     <style>
-        /* Seksioni i Health and Wellness */
-        .health-wellness {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+        body {
+            font-family: "Outfit", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(248, 246, 248);
+            color: #424949;
         }
 
-        .health-wellness h1 {
-            font-size: 36px;
-            color: rgb(236, 167, 83);
-            font-family: "Playfair Display", serif;
-        }
-
-        .health-wellness p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #566573;
-            margin: 20px auto;
-            max-width: 800px;
-        }
-
-        .wellness-tips {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .tip {
-            width: 250px;
-            background-color: #fff;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .tip h3 {
-            font-size: 22px;
-            color: rgb(236, 167, 83);
-            font-family: "Playfair Display", serif;
-        }
-
-        .tip p {
-            font-size: 16px;
-            color: #566573;
-            line-height: 1.6;
-        }
-
-        .tip button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: rgb(236, 167, 83);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .tip button:hover {
-            background-color: #d1845b;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 15% auto;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 500px;
+        .header {
             text-align: center;
+            margin-bottom: 30px;
         }
 
-        .modal-content h4 {
+        .header h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 48px;
+            color: rgb(236, 167, 83);
+        }
+
+        .header p {
+            font-family: "Dancing Script", serif;
             font-size: 24px;
-            margin-bottom: 20px;
-            color: rgb(236, 167, 83);
+            color: rgb(154, 140, 155);
         }
 
-        .modal-content ul {
-            list-style: none;
-            padding: 0;
+        .recipe-section {
+            text-align: center;
         }
 
-        .modal-content li {
+        .recipe-section p {
             font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .category {
+            width: 200px;
+            padding: 15px;
+            border: 2px solid rgb(236, 167, 83);
+            border-radius: 10px;
+            text-align: center;
+            background-color: rgb(239, 232, 238);
+            transition: transform 0.3s ease;
+        }
+
+        .category:hover {
+            transform: scale(1.05);
+        }
+
+        .category h3 {
+            font-family: "Dancing Script", serif;
+            font-size: 22px;
+            color: rgb(154, 140, 155);
             margin: 10px 0;
+        }
+
+        .category p {
+            font-size: 14px;
             color: #566573;
         }
 
-        .modal-content button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: rgb(236, 167, 83);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        @media (max-width: 768px) {
+            .category {
+                width: calc(50% - 20px);
+            }
         }
 
-        .modal-content button:hover {
-            background-color: #d1845b;
+        @media (max-width: 480px) {
+            .category {
+                width: 100%;
+            }
         }
+        .footer{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        background-color:rgb(236, 167, 83);
+        width: 100%;
+    }
+    .email{
+        background-color: rgb(236, 167, 83);
+        width: 600px;
+        margin-top: 20px;
+        margin-left: -60px;
+    }
+    #signup{
+        font-family: "Dancing Script", serif;
+        font-size: 40px;
+    }
+    #email1{
+        text-align: center;
+    }
+    #email2{
+        text-align: center;
+        margin-top: -15px;
+    }
+    #email3{
+        margin-left: 170px;
 
-        /* Programi i Ushqimit dhe Ushqimi i Shëndetshëm */
-        .healthy-eating {
-            background-color: #f0f3f5;
-            padding: 40px 20px;
-        }
+    }
+    #email4{
+        width: 100px;
+        height: 35.5px;
+    }
+    #email5{
+        width: 100px;
+        height: 35.5px;
 
-        .healthy-eating h2 {
-            font-size: 28px;
-            color: rgb(236, 167, 83);
-            font-family: "Playfair Display", serif;
-        }
-
-        .program-benefits {
-            list-style: none;
-            padding: 0;
-            font-size: 18px;
-            color: #566573;
-        }
-
-        .program-benefits li {
-            margin: 10px 0;
-        }
+    }
+    #submit{
+        background-color:rgb(154, 140, 155);
+        width: 40px;
+        height: 40px;
+        border-color: rgb(154, 140, 155);
+    }
+    #numri{
+        color: black;
+        text-decoration: none;
+    }
     </style>
 </head>
 <body>
-
-    <!-- Navbar -->
     <div id="navbar-placeholder"></div>
-
-    <!-- Seksioni i Health and Wellness -->
-    <section class="health-wellness">
-        <h1>Health and Wellness</h1>
-        <p>At Home Cooking, we believe that health and wellness are the foundation for living a fulfilling life. We provide you with a variety of resources to help you maintain a healthy lifestyle while enjoying delicious, nutritious meals.</p>
-
-        <div class="wellness-tips">
-            <div class="tip">
-                <h3>Eat Balanced Meals</h3>
-                <p>Incorporating a variety of foods in your meals ensures you get the essential nutrients needed for optimal health. Our recipes focus on nutrient-rich ingredients that fuel your body.</p>
-                <button id="openModalCategories">View Categories</button>
-            </div>
-            <div class="tip">
-                <h3>Meal Preps</h3>
-                <p>Plan your meals efficiently with our Meal Preps suggestions. We offer ideas for a balanced breakfast, lunch, and dinner to simplify your day.</p>
-                <button id="openModalMealPreps">View Meal Plans</button>
-            </div>
+    <div class="container">
+        <div class="header">
+            <h1>Healthy Recipes</h1>
+            <p>Your guide to healthy meal ideas</p>
         </div>
-
-        <!-- Programi i Ushqimit dhe Ushqimi i Shëndetshëm -->
-        <div class="healthy-eating">
-            <h2>Healthy Eating Program</h2>
-            <p>Our Healthy Eating Program is designed to make healthy eating simple and enjoyable. We provide meal plans, shopping lists, and easy-to-follow recipes to help you get started on your wellness journey.</p>
-
-            <ul class="program-benefits">
-                <li>Customizable meal plans based on your dietary preferences</li>
-                <li>Recipes that are easy to prepare and delicious</li>
-                <li>Guidance on portion control and balanced eating</li>
-                <li>Support in making healthier food choices every day</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Modals -->
-    <div id="modalCategories" class="modal">
-        <div class="modal-content">
-            <h4>Balanced Meal Categories</h4>
-            <ul>
-                <li>Sugar-Free Meals</li>
-                <li>Fat-Free</li>
-                <li>Protein-Packed</li>
-                <li>Gluten-Free</li>
-                <li>Low-Carb Options</li>
-            </ul>
-            <button id="closeModalCategories">Close</button>
+        <div class="recipe-section">
+            <p>Discover a variety of healthy recipes tailored to your dietary goals and preferences.</p>
+            <div class="categories">
+                <div class="category">
+                    <a href="sugarfree.html">
+                    <h3>Sugar-Free</h3>
+                    <p>Delicious sugar-free recipes for a healthier lifestyle.</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="weightloss.html">
+                    <h3>Weight Loss</h3>
+                    <p>Meals designed to support your weight loss journey.</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <h3>Protein Packed</h3>
+                    <p>High-protein meals to fuel your body and build strength.</p>
+                </div>
+                <div class="category">
+                    <h3>Healthy Snacks</h3>
+                    <p>Light and nutritious snack ideas to keep you energized.</p>
+                </div>
+                <div class="category">
+                    <h3>Vegan</h3>
+                    <p>Plant-based meals for a compassionate and healthy lifestyle.</p>
+                </div>
+            </div>
         </div>
     </div>
+     <!------Footer-------->
+     <div class="footer">
+        
+        <div class="icons1">
+            <div class="icons">
+            <a id="icon" href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a id="icon" href=""><i class='bx bxl-pinterest' ></i></a>
+            <a id="icon" href=""><i class='bx bxl-tiktok' ></i></a>
+            <a id="icon" href=""><i class='bx bxl-instagram' ></i></a>
+            <a id="icon" href=""><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <div class="logo">
+            <p id="logoo"><b id="homee">Home</b><span id="logostyle">Cooking</span></p>
+            </div>
+        </div>
 
-    <div id="modalMealPreps" class="modal">
-        <div class="modal-content">
-            <h4>Meal Preps Suggestions</h4>
-            <ul>
-                <li><b>Breakfast:</b> Overnight oats with fruits and nuts</li>
-                <li><b>Lunch:</b> Grilled chicken salad with avocado</li>
-                <li><b>Dinner:</b> Steamed fish with roasted vegetables</li>
-            </ul>
-            <button id="closeModalMealPreps">Close</button>
+        <div class="email">
+            <h1 id="email1"><span id="signup">Signup</span> for Email Updates</h1>
+            <p id="email2"><i>Get a Free eCookbook with our top 25 recipes.</i></p>
+            <form id="email3">
+                <label></label>
+                <input id="email4" type="text" placeholder="Firs Name" required>
+                <input id="email5" type="email" placeholder="Email" required>
+                <button id="submit" name="login" value="login" type="submit">GO</button>
+            </form>
+        </div>
+
+        <div id="address">
+            <address>
+                Home Cooking<br>
+                123 Main Street <br>
+                City, Country 12345<br>
+                <a id="numri" href="mailto:homecooking@gmail.com">homecooking@gmail.com</a><br>
+                <a id="numri" href="tel:+123456789">+383 (45) 567-895</a>
+            </address>
         </div>
     </div>
-
-    <script>
-        // Modal për kategoritë
-        const modalCategories = document.getElementById('modalCategories');
-        const openModalCategories = document.getElementById('openModalCategories');
-        const closeModalCategories = document.getElementById('closeModalCategories');
-
-        openModalCategories.addEventListener('click', () => {
-            modalCategories.style.display = 'block';
-        });
-
-        closeModalCategories.addEventListener('click', () => {
-            modalCategories.style.display = 'none';
-        });
-
-        // Modal për meal preps
-        const modalMealPreps = document.getElementById('modalMealPreps');
-        const openModalMealPreps = document.getElementById('openModalMealPreps');
-        const closeModalMealPreps = document.getElementById('closeModalMealPreps');
-
-        openModalMealPreps.addEventListener('click', () => {
-            modalMealPreps.style.display = 'block';
-        });
-
-        closeModalMealPreps.addEventListener('click', () => {
-            modalMealPreps.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target == modalCategories) {
-                modalCategories.style.display = 'none';
-            }
-            if (e.target == modalMealPreps) {
-                modalMealPreps.style.display = 'none';
-            }
-        });
-    </script>
+    <!--------------Footer end----------->
     <script src="../js/navbar.js"></script>
+
 </body>
 </html>
+
+
+
+
 
 
 
