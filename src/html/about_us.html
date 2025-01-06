@@ -325,7 +325,9 @@
                 <p>
                     Lindsay is the voice, author, and creator behind Home Cooking. 
                 </p>
-                <p id="shfaq">She develops recipes and writes content for the blog and on Instagram. 
+                <p id="shfaq">
+                    <audio id="audio-lindsay" src="../../assets/images/lindsayaudio.mp3"></audio>
+                    She develops recipes and writes content for the blog and on Instagram. 
                     The little blog that started as her casual hobby for nights and weekends while working as 
                     a teacher has now grown into a full-fledged business. She lives in Minnesota with her husband James, 
                     dog Sage, and daughter Solvi.<br><button id="hide">Show Less</button>
@@ -445,50 +447,31 @@
 
 
 $(document).ready(function () {
-      
-      function shfaq_heq(action) {
+    function shfaq_heq(action) {
+        const audio = document.getElementById("audio-lindsay");
         if (action === 'show') {
-          $('#shfaq').show();          
-          $('#show').hide();       
-          $('#hide').show();       
+            $('#shfaq').show();
+            $('#show').hide();
+            $('#hide').show();
+            audio.play(); // Luaj audion kur shfaqet teksti
         } else if (action === 'hide') {
-          $('#shfaq').hide();          
-          $('#hide').hide();       
-          $('#show').show();      
+            $('#shfaq').hide();
+            $('#hide').hide();
+            $('#show').show();
+            audio.pause(); // Ndal audion kur fsheh tekstin
+            audio.currentTime = 0; // Kthehu në fillim
         }
-      }
-      
-      $('#show').click(function () {
-        shfaq_heq('show'); 
-      });
+    }
 
-      $('#hide').click(function () {
-        shfaq_heq('hide'); 
-      });
- });
+    $('#show').click(function () {
+        shfaq_heq('show');
+    });
 
- $(document).ready(function () {
-      
-      function heq_shfaq(action) {
-        if (action === 'show1') {
-          $('#shfaq1').show();          
-          $('#show1').hide();       
-          $('#hide1').show();       
-        } else if (action === 'hide1') {
-          $('#shfaq1').hide();          
-          $('#hide1').hide();       
-          $('#show1').show();      
-        }
-      }
-      
-      $('#show1').click(function () {
-        heq_shfaq('show1'); 
-      });
+    $('#hide').click(function () {
+        shfaq_heq('hide');
+    });
+});
 
-      $('#hide1').click(function () {
-        heq_shfaq('hide1'); 
-      });
- });
 
  $(document).ready(function () {
       
