@@ -397,6 +397,42 @@
             color: black;
             text-decoration: none;
         }
+/*drag and drop*/
+.empty{
+    height: 150px;
+    width: 150px;
+    border: 5px solid grey;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px 20px 0px;
+}
+.filled{
+    background: url(../../assets/images/sc.jpg);
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    
+    cursor: pointer;
+}
+.hold{
+    border: 2px solid red;
+}
+.invisible{
+    display: none;
+}
+.hovered{
+    background: lightgrey;
+}
+
+
+
+
 
     </style>
 </head>
@@ -567,6 +603,15 @@
     </div>
     </div>
 
+    <div class="container">
+        <div class="empty">
+         <div class="filled" draggable="true"></div>
+        </div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+    </div>
+
     <!--------------------------------------->
 
     <div class="footer">
@@ -607,6 +652,11 @@
     </div>
 
 
+ 
+
+
+
+
 <script>
     var imageIndex=0;
     var imageArray = [
@@ -628,6 +678,52 @@
         imageIndex = (imageIndex + 1) % imageArray.length;
         showImage(imageIndex);
     };
+
+
+
+
+
+    let empties = document.querySelectorAll('.empty');
+let filled = document.querySelector('.filled');
+
+
+filled.addEventListener('dragstart', drag_start);
+filled.addEventListener('dragend', drag_end);
+
+for(let empty of empties)
+{
+    empty.addEventListener('dragover', drag_over);
+    empty.addEventListener('dragenter', drag_enter);
+    empty.addEventListener('dragleave', drag_leave);
+    empty.addEventListener('drop', drag_drop);
+}
+
+function drag_start(){
+    this.classList.add('hold');
+    setTimeout(() => (this.classList.replace('hold', 'invisible'), 0));
+}
+
+function drag_end(){
+    this.classList.remove('invisible');
+}
+
+function drag_over(){
+    event.preventDefault();
+}
+
+function drag_enter(){
+    event.preventDefault();
+    this.classList.toggle('hovered')
+}
+
+function drag_leave(){
+    this.classList.remove('hovered');
+
+}
+function drag_drop(){
+    this.append(filled);
+
+}
 
 
 </script>
