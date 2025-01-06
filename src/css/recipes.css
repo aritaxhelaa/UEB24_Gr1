@@ -165,3 +165,70 @@ a {
         width: 80%;
     }
 }
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+}
+#icon{
+    font-size: 50px;
+    color: black;
+}
+.icons1{
+    width: 300px;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+#address{
+    margin-top: 60px;
+    margin-right: 200px;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    background-color:rgb(236, 167, 83);
+    width: 100%;
+}
+.email{
+    background-color: rgb(236, 167, 83);
+    width: 600px;
+    margin-top: 20px;
+    margin-left: -60px;
+}
+#signup{
+    font-family: "Dancing Script", serif;
+    font-size: 40px;
+}
+#email1{
+    text-align: center;
+}
+#email2{
+    text-align: center;
+    margin-top: -15px;
+}
+#email3{
+    margin-left: 170px;
+
+}
+#email4{
+    width: 100px;
+    height: 35.5px;
+}
+#email5{
+    width: 100px;
+    height: 35.5px;
+
+}
+#submit{
+    background-color:rgb(154, 140, 155);
+    width: 40px;
+    height: 40px;
+    border-color: rgb(154, 140, 155);
+    margin-bottom: 5px;
+}
+/* footer end */
+#numri{
+    color: black;
+    text-decoration: none;
+}
