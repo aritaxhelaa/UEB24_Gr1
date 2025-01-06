@@ -164,11 +164,89 @@
         #shfaq1{
             display: none;
         }
+        #shfaq2{
+            display: none;
+        }
+        #shfaq3{
+            display: none;
+        }
       
         #ourteam{
             margin-left: 215px;
             color: #424949;
         }
+        .personi2,.personi3, .personi4{
+            margin-top: 20px;
+        }
+        /* footer */
+        .icons{
+            display: flex;
+            justify-content: space-around;
+        }
+        #icon{
+            font-size: 50px;
+            color: black;
+        }
+        .icons1{
+            width: 300px;
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+        #address{
+            margin-top: 60px;
+            margin-right: 200px;
+        }
+        .footer{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            background-color:rgb(236, 167, 83);
+            width: 100%;
+        }
+        .email{
+            background-color: rgb(236, 167, 83);
+            width: 600px;
+            margin-top: 20px;
+            margin-left: -60px;
+        }
+        #signup{
+            font-family: "Dancing Script", serif;
+            font-size: 40px;
+        }
+        #email1{
+            text-align: center;
+        }
+        #email2{
+            text-align: center;
+            margin-top: -15px;
+        }
+        #email3{
+            margin-left: 170px;
+
+        }
+        #email4{
+            width: 100px;
+            height: 35.5px;
+        }
+        #email5{
+            width: 100px;
+            height: 35.5px;
+
+        }
+        #submit{
+            background-color:rgb(154, 140, 155);
+            width: 40px;
+            height: 40px;
+            border-color: rgb(154, 140, 155);
+        }
+        #numri{
+            color: black;
+            text-decoration: none;
+        }
+        /* footer end */
+       
+      
+    
       
     </style>
 </head>
@@ -260,14 +338,92 @@
             </div>
         </div>
 
-    <br><br><br><br><br><br><br><br><br>
+        <div class="personi3">
+            <img src="../../assets/imagages/njeri3.jpg">
+            <div class="details">
+                <h1 class="h11">JENA</h1>
+                <p>
+                    Jenna is the Communications Manager at Home Cooking. 
+                </p>
+                <p id="shfaq2">
+                   She manages much of the day-to-day
+                     communication with readers and brands – on and off the blog. You can find her answering recipe questions on posts,
+                      helping readers with ebook purchases, coordinating partnership details with brands, 
+                      and other various behind-the-scenes projects. Jenna lives in Minnesota with her husband.
+                      <br><button id="hide2">Show Less</button>
+                </p>
+                <button id="show2">
+                    <p>Read More</p>
+                </button>
+            </div>
+        </div>
+        <div class="personi4">
+            <img src="../../assets/images/njeri2.jpg">
+            <div class="details">
+                <h1 class="h11">KRISTA</h1>
+                <p>
+                    Krista is the Shoot Assistant at Home Cooking. 
+                </p>
+                <p id="shfaq3">
+                    You’ll find her in the kitchen supporting Lindsay on shoot days, prepping and cooking recipes for the blog. 
+                    She is also the resident recipe tester, who tests and re-tests many recipes to ensure the best cooking experience. 
+                    Krista lives in Minnesota with her husband and 3 children. 
+                    She also enjoys food photography and managing her blog Destination Delish.
+                      <br><button id="hide3">Show Less</button>
+                </p>
+                <button id="show3">
+                    <p>Read More</p>
+                </button>
+            </div>
+        </div>
 
-    <script src="../js/navbar.js"></script>
+         <!------Footer-------->
+         <div class="footer">
+        
+            <div class="icons1">
+                <div class="icons">
+                <a id="icon" href=""><i class='bx bxl-facebook-circle'></i></a>
+                <a id="icon" href=""><i class='bx bxl-pinterest' ></i></a>
+                <a id="icon" href=""><i class='bx bxl-tiktok' ></i></a>
+                <a id="icon" href=""><i class='bx bxl-instagram' ></i></a>
+                <a id="icon" href=""><i class='bx bxl-twitter' ></i></a>
+                </div>
+                <div class="logo">
+                <p id="logoo"><b id="homee">Home</b><span id="logostyle">Cooking</span></p>
+                </div>
+            </div>
+
+            <div class="email">
+                <h1 id="email1"><span id="signup">Signup</span> for Email Updates</h1>
+                <p id="email2"><i>Get a Free eCookbook with our top 25 recipes.</i></p>
+                <form id="email3">
+                    <label></label>
+                    <input id="email4" type="text" placeholder="Firs Name" required>
+                    <input id="email5" type="email" placeholder="Email" required>
+                    <button id="submit" name="login" value="login" type="submit">GO</button>
+                </form>
+            </div>
+    
+            <div id="address">
+                <address>
+                    Home Cooking<br>
+                    123 Main Street <br>
+                    City, Country 12345<br>
+                    <a id="numri" href="mailto:homecooking@gmail.com">homecooking@gmail.com</a><br>
+                    <a id="numri" href="tel:+123456789">+383 (45) 567-895</a>
+                </address>
+            </div>
+        </div>
+        <!--------------Footer end----------->
+
+
+   <script src="../js/navbar.js"></script>
 
 </body>
   
 
 <script type="text/javascript">
+
 
 $(document).ready(function () {
       
@@ -305,6 +461,7 @@ $(document).ready(function () {
           $('#show1').show();      
         }
       }
+      
       $('#show1').click(function () {
         heq_shfaq('show1'); 
       });
@@ -313,5 +470,54 @@ $(document).ready(function () {
         heq_shfaq('hide1'); 
       });
  });
+
+ $(document).ready(function () {
+      
+      function heq_shfaq1(action) {
+        if (action === 'show2') {
+          $('#shfaq2').show();          
+          $('#show2').hide();       
+          $('#hide2').show();       
+        } else if (action === 'hide2') {
+          $('#shfaq2').hide();          
+          $('#hide2').hide();       
+          $('#show2').show();      
+        }
+      }
+      
+      $('#show2').click(function () {
+        heq_shfaq1('show2'); 
+      });
+
+      $('#hide2').click(function () {
+        heq_shfaq1('hide2'); 
+      });
+ });
+
+ $(document).ready(function () {
+      
+      function heq_shfaq2(action) {
+        if (action === 'show3') {
+          $('#shfaq3').show();          
+          $('#show3').hide();       
+          $('#hide3').show();       
+        } else if (action === 'hide3') {
+          $('#shfaq3').hide();          
+          $('#hide3').hide();       
+          $('#show3').show();      
+        }
+      }
+      
+      $('#show3').click(function () {
+        heq_shfaq2('show3'); 
+      });
+
+      $('#hide3').click(function () {
+        heq_shfaq2('hide3'); 
+      });
+ });
+
+ </script>
+ </html>
        
        
