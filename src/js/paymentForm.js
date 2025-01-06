@@ -111,7 +111,9 @@ document.getElementById("paymentForm").addEventListener("submit", function (e) {
 
     console.log("Form data validated successfully:", formData);
     alert("All fields are valid. Redirecting to home page...");
-    window.location.href = "../html/home.html";
+    setTimeout(function () {
+      window.location.href = "../html/home.html";
+    }, 1000);
 
   } catch (error) {
     alert(error.message);
@@ -123,7 +125,7 @@ document.getElementById("paymentForm").addEventListener("submit", function (e) {
 document.getElementById("card-number").addEventListener("input", function(e) {
   let value = e.target.value.replace(/\D/g, '');
   value = value.replace(/(\d{4})/g, '$1 ').trim();
-  e.target.value = value.substring(0, 19); // 16 digits + 3 spaces
+  e.target.value = value.substring(0, 19);
 });
 
 document.getElementById("cvv").addEventListener("input", function(e) {
