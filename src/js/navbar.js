@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+$(document).ready(function() {
     const navbarHTML = `
         <nav class="background">
             <div class="logo">
@@ -17,5 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
         <hr id="hr1">
     `;
     
-    document.getElementById('navbar-placeholder').innerHTML = navbarHTML;
+    $('#navbar-placeholder').html(navbarHTML);
+
+    // Example callbacks for navigation interactions
+    $('.list a').on('click', function(e) {
+        console.log('Navigating to:', $(this).attr('href'));
+    });
+
+    $('#logoo').on('click', function() {
+        $(this).fadeOut(200).fadeIn(200);
+    });
 });
