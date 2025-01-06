@@ -19,15 +19,10 @@
 
     <style>
 
-        #logostyle {
-            font-family: "Dancing Script", serif;
-            font-size: 40px;
-            color:rgb(113, 56, 110);
-        }
+    
 
 
-
-        /* Preserved Original Styles */
+      
         #img1 {
             width: auto;
             height: 90px; 
@@ -72,7 +67,7 @@
             font-size: 23px;
         }
 
-        #span1 {
+        #span1 { 
             font-family: "Dancing Script", serif;
             font-size: 30px;
             color: rgb(172, 142, 170);
@@ -335,6 +330,7 @@
         .div1 a:hover {
             color: wheat;
         }
+        /* footer */
         .icons{
             display: flex;
             justify-content: space-around;
@@ -345,9 +341,12 @@
         }
         .icons1{
             width: 300px;
-            margin-left: 250px;
+            margin-left: 150px;
             margin-top: 50px;
-
+        }
+        #address{
+            margin-top: 60px;
+            margin-right: 200px;
         }
         .footer{
             display: flex;
@@ -357,10 +356,10 @@
             width: 100%;
         }
         .email{
-            margin-right: 250px;
             background-color: rgb(236, 167, 83);
             width: 600px;
             margin-top: 20px;
+            margin-left: -60px;
         }
         #signup{
             font-family: "Dancing Script", serif;
@@ -391,6 +390,11 @@
             width: 40px;
             height: 40px;
             border-color: rgb(154, 140, 155);
+        }
+        /* footer end */
+        #numri{
+            color: black;
+            text-decoration: none;
         }
 
     </style>
@@ -527,7 +531,7 @@
                 <p id="tekst2"><b>Penne alla Vodka</b></p>
                 <p id="tekst3">This penne alla vodka recipe is quick and easy to make from scratch with a homemade tomato 
                     and vodka sauce that's so flavorsome for an elegant Italian meal on your table in less than half an hour!</p>
-                <a id="tekst4" href="#"><b>CONTINUE READING</b></a>
+                <a id="tekst4" href="../html/receta1.html"><b>CONTINUE READING</b></a>
             </div>
         </div>
 
@@ -540,7 +544,7 @@
                 <p id="tekst2"><b>Crispy Caesar Chicken Cutlets</b></p>
                 <p id="tekst3">Crispy chicken cutlets on the outside, tender and juicy on the inside all topped with crisp romaine lettuce
                      and the perfect homemade dressing that is both salty and creamy.</p>
-                <a id="tekst4" href="#"><b>CONTINUE READING</b></a>
+                <a id="tekst4" href="../html/receta2.html"><b>CONTINUE READING</b></a>
             </div>
         </div>
 
@@ -553,7 +557,7 @@
                 <p id="tekst2"><b>Dulce De Leche Tiramisu</b></p>
                 <p id="tekst3">Creamy dulce de leche layered with espresso-soaked ladyfingers in one delightful slice!
                 This Dulce De Leche Tiramisu is my new favorite dessert.</p>
-                <a id="tekst4" href="#"><b>CONTINUE READING</b></a>
+                <a id="tekst4" href="../html/receta3.html"><b>CONTINUE READING</b></a>
             </div>
         </div>
 
@@ -565,22 +569,23 @@
     <!--------------------------------------->
 
     <div class="footer">
+        
         <div class="icons1">
-        <div class="icons">
+            <div class="icons">
             <a id="icon" href=""><i class='bx bxl-facebook-circle'></i></a>
             <a id="icon" href=""><i class='bx bxl-pinterest' ></i></a>
             <a id="icon" href=""><i class='bx bxl-tiktok' ></i></a>
             <a id="icon" href=""><i class='bx bxl-instagram' ></i></a>
             <a id="icon" href=""><i class='bx bxl-twitter' ></i></a>
-        </div>
-        <div class="logo">
+            </div>
+            <div class="logo">
             <p id="logoo"><b id="homee">Home</b><span id="logostyle">Cooking</span></p>
-        </div>
+            </div>
         </div>
 
         <div class="email">
             <h1 id="email1"><span id="signup">Signup</span> for Email Updates</h1>
-            <p id="email2">Get a Free eCookbook with our top 25 recipes.</p>
+            <p id="email2"><i>Get a Free eCookbook with our top 25 recipes.</i></p>
             <form id="email3">
                 <label></label>
                 <input id="email4" type="text" placeholder="Firs Name" required>
@@ -588,7 +593,18 @@
                 <button id="submit" name="login" value="login" type="submit">GO</button>
             </form>
         </div>
+
+        <div id="address">
+            <address>
+                Home Cooking<br>
+                123 Main Street <br>
+                City, Country 12345<br>
+                <a id="numri" href="mailto:homecooking@gmail.com">homecooking@gmail.com</a><br>
+                <a id="numri" href="tel:+123456789">+383 (45) 567-895</a>
+            </address>
+        </div>
     </div>
+
 
 <script>
     var imageIndex=0;
