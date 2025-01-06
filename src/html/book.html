@@ -53,20 +53,26 @@
         color: #28a745;
       }
       .buy-btn {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        background: #ff7a00;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      .buy-btn:hover {
-        background: #e06600;
-      }
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(45deg, #ff7a00, #e06600); /* Gradient nga portokalli në të kuqe */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(45deg, #e06600, #ff7a00); /* Efekti i gradientit në hover */
+}
+
+        .highlight {
+            background-color: whitesmoke;
+            font-weight: bold;
+        }
     </style>
   </head>
   <body>
@@ -80,7 +86,7 @@
     }
     ">Our Special Recipe Book</h1>
       <p>
-        Discover a world of flavor with <i>The Basic Cook Book Guide!</i> Packed with
+        Discover a world of flavor with <mark><i>The Basic Cook Book Guide!</i></mark> Packed with
         classic recipes, easy-to-follow instructions, and tips for every level
         of home cook, this book will help you create delicious meals that bring
         joy to your table. From quick weeknight dinners to impressive dishes for
@@ -89,7 +95,7 @@
  <b>       Healthy, simple, and inspiring—cooking made fun for
   everyone!</b>
       </p>
-      <p class="price">$19.99</p>
+      <p class="price"><span class="highlight">$19.99</span></p>
       <button class="buy-btn" id="buyNow">Buy Now</button>
     </div>
     <script src="../js/navbar.js"></script>
