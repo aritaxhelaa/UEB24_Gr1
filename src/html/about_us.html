@@ -227,9 +227,9 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #f9f9f9;  /* Light background color */
+    background-color: #f9f9f9;  
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .feedback-section h2 {
@@ -240,8 +240,8 @@
 }
 
 .feedback-section p {
-    font-size: 1.1rem; /* Slightly larger font for paragraph */
-    color: #666; /* Subtle text color */
+    font-size: 1.1rem; 
+    color: #666; 
     margin-bottom: 20px;
 }
 
@@ -303,8 +303,7 @@ textarea {
 }
 
 textarea:focus {
-    border-color: #ffcc00; /* Highlight border when focused */
-}
+    border-color: #ffcc00;
 
 /* Submit Button Styling */
 .submit-button input[type="submit"] {
@@ -320,10 +319,10 @@ textarea:focus {
 }
 
 .submit-button input[type="submit"]:hover {
-    background-color: #e76a00; /* Slightly darker orange on hover */
+    background-color: #e76a00; 
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
     .feedback-section {
         width: 90%;
@@ -338,16 +337,16 @@ textarea:focus {
     }
 }
 #thankYouPopup {
-    display: none; /* Initially hidden */
-    position: fixed; /* Ensures it's in the center of the screen */
-    top: 50%; /* Centers the popup vertically */
-    left: 50%; /* Centers the popup horizontally */
-    transform: translate(-50%, -50%); /* Exact centering */
+    display: none; 
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Makes sure it's on top of other content */
+    z-index: 1000; 
     text-align: center;
 }
 
@@ -435,13 +434,13 @@ textarea:focus {
 }
 
 .contact-icon i {
-    font-size: 40px; /* Ensures icons are sized properly */
+    font-size: 40px; 
 }
 
 /* Phone icon style */
 .bxs-phone {
     font-size: 40px;
-    color: black; /* Ensure the phone icon appears in black */
+    color: black; 
 }
 
 #our-history {
@@ -726,7 +725,7 @@ textarea:focus {
             <input type="submit" value="Submit Feedback">
         </div>
     </form>
-    <!-- Popup - Dritarja që do të shfaqet kur të dërgoni formularin -->
+    <!-- Popup - -->
     <div id="thankYouPopup" style="display: none;">
         <button id="closeBtn" onclick="closePopup()">X</button>
         <h3>Thank you for your feedback!</h3>
@@ -806,7 +805,7 @@ textarea:focus {
         </div>
         <p>Our journey began with a passion for good food and the joy of sharing recipes. Founded in 2010, we started as a small group of food enthusiasts who loved experimenting with flavors and discovering new culinary traditions. Over the years, our love for cooking grew into a vibrant community, and today, we are proud to offer a platform that connects food lovers from around the world. Whether you're a novice cook or an experienced chef, we aim to inspire and support you with delicious, easy-to-follow recipes that bring people together around the table.</p>
     </div>
-    <button onclick="switchPositions()" class="switch-button">&#8596;</button> <!-- Shigjetë -->
+    <button onclick="switchPositions()" class="switch-button">&#8596;</button> 
 </section>
 
 
@@ -865,13 +864,13 @@ $(document).ready(function () {
             $('#shfaq').show();
             $('#show').hide();
             $('#hide').show();
-            audio.play(); // Luaj audion kur shfaqet teksti
+            audio.play(); 
         } else if (action === 'hide') {
             $('#shfaq').hide();
             $('#hide').hide();
             $('#show').show();
-            audio.pause(); // Ndal audion kur fsheh tekstin
-            audio.currentTime = 0; // Kthehu në fillim
+            audio.pause(); 
+            audio.currentTime = 0; 
         }
     }
 
@@ -958,57 +957,57 @@ $(document).ready(function () {
  function switchPositions() {
     var imageContainer = document.querySelector('.history-image-container');
     
-    // Ndërroni pozicionin e figurës pa lëvizur tekstin
+    // Zhvendosja e figurës në anën e majtë dhe të djathtë të tekstit
     if (imageContainer.style.order === '1') {
-        imageContainer.style.order = '-1'; // Figura shkon në të majtë
+        imageContainer.style.order = '-1'; 
     } else {
-        imageContainer.style.order = '1'; // Figura shkon në të djathtë
+        imageContainer.style.order = '1'; 
     }
 }
  
 document.getElementById('feedbackForm').addEventListener('submit', function(event) { 
-    event.preventDefault(); // Pengon dërgimin e formës në mënyrë të parazgjedhur
+    event.preventDefault(); 
 
-    // Kontrollo nëse janë plotësuar të gjitha fushat
+    // Kontrollo nese jane plotesuar fushat
     var visitAgain = document.querySelector('input[name="visit-again"]:checked');
     var rating = document.querySelector('input[name="rating"]:checked');
     var message = document.getElementById('message').value.trim();
 
-    // Verifikimi për "Will you visit us again?"
+    // Verifikimi 
     if (!visitAgain) {
         alert("Please select whether you will visit us again.");
-        return; // Stopojmë ekzekutimin më tej
+        return; 
     }
 
-    // Verifikimi për vlerësimin me yje
+    // Verifikimi 
     if (!rating) {
         alert("Please rate us.");
-        return; // Stopojmë ekzekutimin më tej
+        return; 
     }
 
-    // Verifikimi për fushën e mesazhit
+    // Verifikimi 
     if (message === "") {
         alert("Please enter your feedback before submitting.");
-        return; // Stopojmë ekzekutimin më tej
+        return; 
     }
 
-    // Përdorim një max value të caktuar (5)
+    //  max value  (5)
     let maxValue = 5; 
     let ratingValue = parseInt(rating.value);
 
-    // Kontrollo nëse rating-u është më i madh se maxValue
+    
     if (ratingValue > maxValue) {
         alert("Rating exceeds maximum value of 5!");
         return;
     }
 
-    // Përdor toString() për të shfaqur rating-un në format tekstual
+    
     let ratingAsString = ratingValue.toString();
 
-    // Përdor toExponential() për të shfaqur rating-un në format eksponencial
+    // Përdor toExponential() 
     let ratingInExponential = ratingValue.toExponential();
 
-    // Shfaq popup me mesazhin e falënderimit dhe me formate të ndryshme
+    // Shfaq popup 
     document.getElementById('thankYouPopup').style.display = 'block';
     document.getElementById('ratingValue').textContent = ratingAsString;
     document.getElementById('ratingExp').textContent = ratingInExponential;
