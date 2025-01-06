@@ -1,20 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const header = document.querySelector("header");
-    const foodItems = document.querySelectorAll(".food-item");
-    const searchInput = document.getElementById("search-input");
+$(document).ready(function() {
+    const filterButtons = $(".filter-btn");
+    const header = $("header");
+    const foodItems = $(".food-item");
+    const searchInput = $("#search-input");
 
-  
     const urlParams = new URLSearchParams(window.location.search);
     const filterCategory = urlParams.get('filter');
 
-
     function applyFilter(category) {
-        foodItems.forEach(item => {
-            if (category === "all" || item.classList.contains(category)) {
-                item.style.display = "block";
+        foodItems.each(function() {
+            if (category === "all" || $(this).hasClass(category)) {
+                $(this).show();
             } else {
-                item.style.display = "none";
+                $(this).hide();
             }
         });
 
@@ -26,36 +24,33 @@ document.addEventListener("DOMContentLoaded", function() {
             all: "url('../../assets/images/all.jpg')",
             default: "url('../../assets/images/default-header.jpg')",
         };
-        header.style.backgroundImage = images[category] || images.default;
-    }
 
+        header.css("background-image", images[category] || images.default);
+    }
 
     if (filterCategory) {
         applyFilter(filterCategory);
     }
 
-
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            const category = this.getAttribute("data-category");
-            applyFilter(category);
-        });
+    filterButtons.on("click", function() {
+        const category = $(this).data("category");
+        applyFilter(category);
     });
 
- 
-    searchInput.addEventListener("input", function() {
-        const searchQuery = searchInput.value.toLowerCase().trim();
-        foodItems.forEach(item => {
-            const itemName = item.querySelector("h3").textContent.toLowerCase();
+    searchInput.on("input", function() {
+        const searchQuery = $(this).val().toLowerCase().trim();
+        foodItems.each(function() {
+            const itemName = $(this).find("h3").text().toLowerCase();
             if (itemName.includes(searchQuery)) {
-                item.style.display = "block";
+                $(this).show(); 
             } else {
-                item.style.display = "none";
+                $(this).hide();
             }
         });
     });
 
-  
-    const allButton = document.querySelector('.filter-btn[data-category="all"]');
-    if (allButton && !filterCategory) allButton.click();
+    const allButton = $('.filter-btn[data-category="all"]');
+    if (allButton.length && !filterCategory) {
+        allButton.click();
+    }
 });

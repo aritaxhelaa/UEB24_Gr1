@@ -81,7 +81,7 @@ body {
   }
   
   nav a:hover {
-    color: white;
+    color: rgb(192, 6, 6);
   }
   
   #ingredients, #instructions, #importantinformation {

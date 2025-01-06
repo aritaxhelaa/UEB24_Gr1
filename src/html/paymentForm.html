@@ -21,7 +21,7 @@
   <body>
     <div class="wrapper">
       <div class="form-container payment-form">
-        <form id="paymentForm">
+        <form id="paymentForm" oninput="total.value = calculateTotal()">
           <h1>Payment Information</h1>
 
           <h3>Payment Method</h3>
@@ -45,23 +45,23 @@
             <i class="bx bxs-lock"></i>
           </div>
           <div class="input-box">
-            <select id="expiry-month" required>
-              <option value="" disabled selected>Expiry Month</option>
-              <option value="01">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>
-              <option value="04">04</option>
-              <option value="05">05</option>
-              <option value="06">06</option>
-              <option value="07">07</option>
-              <option value="08">08</option>
-              <option value="09">09</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>
-            <select id="expiry-year" required>
-              <option value="" disabled selected>Expiry Year</option>
+            <input type="text" list="months" id="expiry-month" placeholder="Expiry Month" required>
+            <datalist id="months">
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </datalist>
+            <input type="text" list="years" id="expiry-year" placeholder="Expiry Year" required>
+            <datalist id="years">
               <option value="2024">2024</option>
               <option value="2025">2025</option>
               <option value="2026">2026</option>
@@ -69,12 +69,18 @@
               <option value="2028">2028</option>
               <option value="2029">2029</option>
               <option value="2030">2030</option>
-            </select>
+            </datalist>
           </div>
 
           <h3>Billing Information</h3>
           <div class="input-box">
-            <input type="email" id="email" placeholder="Email Address" required />
+            <input type="email" id="email" list="common-emails" placeholder="Email Address" required />
+            <datalist id="common-emails">
+              <option value="@gmail.com">
+              <option value="@yahoo.com">
+              <option value="@hotmail.com">
+              <option value="@outlook.com">
+            </datalist>
             <i class="bx bxs-envelope"></i>
           </div>
           <div class="input-box">
@@ -82,13 +88,25 @@
             <input type="text" id="last-name" placeholder="Last Name" required />
           </div>
           <div class="input-box">
-            <input type="text" id="address1" placeholder="Address 1" required />
+            <input type="text" id="address1" list="common-addresses" placeholder="Address 1" required />
+            <datalist id="common-addresses">
+              <option value="Apartment">
+              <option value="Suite">
+              <option value="Floor">
+              <option value="Unit">
+            </datalist>
           </div>
           <div class="input-box">
             <input type="text" id="address2" placeholder="Address 2" />
           </div>
           <div class="input-box">
-            <input type="text" id="city" placeholder="City" required />
+            <input type="text" id="city" list="cities" placeholder="City" required />
+            <datalist id="cities">
+              <option value="Pristina">
+              <option value="Prizren">
+              <option value="Tirana">
+              <option value="Durres">
+            </datalist>
             <select id="state" required>
               <option value="" disabled selected>Select State</option>
               <option value="01">Kosovo</option>
@@ -97,6 +115,13 @@
           </div>
           <div class="input-box">
             <input type="text" id="zip-code" placeholder="Zip Code" required />
+          </div>
+
+          <h3>Order Summary</h3>
+          <div class="order-summary">
+            <p>Subtotal: $<output name="subtotal">19.99</output></p>
+            <p>Tax (18%): $<output name="tax">3.43</output></p>
+            <p>Total: $<output name="total">22.42</output></p>
           </div>
 
           <h3>Preferences</h3>
