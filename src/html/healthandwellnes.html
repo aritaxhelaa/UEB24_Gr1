@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health and Wellness</title>
-
-    <!-- Linku për CSS -->
+    <title>Healthy Recipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/navbar.css">
+<<<<<<< HEAD
       <!--Fonts-->
 
       <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
@@ -22,52 +24,114 @@
         /* Seksioni i Health and Wellness */
         
         .health-wellness {
+=======
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: "Outfit", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(248, 246, 248);
+            color: #424949;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+>>>>>>> 110770f9fc347991f1521277adcc02ac7f096e6d
             text-align: center;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+            margin-bottom: 30px;
         }
 
-        .health-wellness h1 {
-            font-size: 36px;
-            color: rgb(236, 167, 83);
+        .header h1 {
             font-family: "Playfair Display", serif;
+            font-size: 48px;
+            color: rgb(236, 167, 83);
         }
 
-        .health-wellness p {
+        .header p {
+            font-family: "Dancing Script", serif;
+            font-size: 24px;
+            color: rgb(154, 140, 155);
+        }
+
+        .recipe-section {
+            text-align: center;
+        }
+
+        .recipe-section p {
             font-size: 18px;
-            line-height: 1.8;
-            color: #566573;
-            margin: 20px auto;
-            max-width: 800px;
+            margin-bottom: 30px;
         }
 
-        .wellness-tips {
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .category {
+            width: 200px;
+            padding: 15px;
+            border: 2px solid rgb(236, 167, 83);
+            border-radius: 10px;
+            text-align: center;
+            background-color: rgb(239, 232, 238);
+            transition: transform 0.3s ease;
+        }
+
+        .category:hover {
+            transform: scale(1.05);
+        }
+
+        .category h3 {
+            font-family: "Dancing Script", serif;
+            font-size: 22px;
+            color: rgb(154, 140, 155);
+            margin: 10px 0;
+        }
+
+        .category p {
+            font-size: 14px;
+            color: #566573;
+        }
+
+        @media (max-width: 768px) {
+            .category {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category {
+                width: 100%;
+            }
+        }
+      
+        /* footer */
+        .icons{
             display: flex;
             justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 40px;
         }
-
-        .tip {
-            width: 250px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        #icon{
+            font-size: 50px;
+            color: black;
         }
-
-        .tip h3 {
-            font-size: 22px;
-            color: rgb(236, 167, 83);
-            font-family: "Playfair Display", serif;
+        .icons1{
+            width: 300px;
+            margin-left: 150px;
+            margin-top: 50px;
         }
-
-        .tip p {
-            font-size: 16px;
-            color: #566573;
-            line-height: 1.6;
+        #address{
+            margin-top: 60px;
+            margin-right: 200px;
         }
+<<<<<<< HEAD
 
         .tip button {
             margin-top: 10px;
@@ -93,47 +157,52 @@
             z-index: 1000;
             left: 0;
             top: 0;
+=======
+        .footer{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            background-color:rgb(236, 167, 83);
+>>>>>>> 110770f9fc347991f1521277adcc02ac7f096e6d
             width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
         }
-
-        .modal-content {
-            background-color: white;
-            margin: 15% auto;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 500px;
+        .email{
+            background-color: rgb(236, 167, 83);
+            width: 600px;
+            margin-top: 20px;
+            margin-left: -60px;
+        }
+        #signup{
+            font-family: "Dancing Script", serif;
+            font-size: 40px;
+        }
+        #email1{
             text-align: center;
         }
-
-        .modal-content h4 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: rgb(236, 167, 83);
+        #email2{
+            text-align: center;
+            margin-top: -15px;
         }
+        #email3{
+            margin-left: 170px;
 
-        .modal-content ul {
-            list-style: none;
-            padding: 0;
         }
+        #email4{
+            width: 100px;
+            height: 35.5px;
+        }
+        #email5{
+            width: 100px;
+            height: 35.5px;
 
-        .modal-content li {
-            font-size: 18px;
-            margin: 10px 0;
-            color: #566573;
         }
-
-        .modal-content button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: rgb(236, 167, 83);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        #submit{
+            background-color:rgb(154, 140, 155);
+            width: 40px;
+            height: 40px;
+            border-color: rgb(154, 140, 155);
         }
+<<<<<<< HEAD
 
         .modal-content button:hover {
             background-color: #d1845b;
@@ -178,12 +247,20 @@
   
     
     /*---Footer end---*/
+=======
+        /* footer end */
+        #numri{
+            color: black;
+            text-decoration: none;
+        }
+        
+    
+>>>>>>> 110770f9fc347991f1521277adcc02ac7f096e6d
     </style>
 </head>
 <body>
-
-    <!-- Navbar -->
     <div id="navbar-placeholder"></div>
+<<<<<<< HEAD
 
 
 
@@ -204,15 +281,67 @@
                 <h3>Eat Balanced Meals</h3>
                 <p>Incorporating a variety of foods in your meals ensures you get the essential nutrients needed for optimal health. Our recipes focus on nutrient-rich ingredients that fuel your body.</p>
                 <button id="openModalCategories">View Categories</button>
+=======
+    <div class="container">
+        <div class="header">
+            <h1>Healthy Recipes</h1>
+            <p>Your guide to healthy meal ideas</p>
+        </div>
+        <div class="recipe-section">
+            <p>Discover a variety of healthy recipes tailored to your dietary goals and preferences.</p>
+            <div class="categories">
+                <div class="category">
+                    <a href="sugarfree.html">
+                    <h3>Sugar-Free</h3>
+                    <p>Delicious sugar-free recipes for a healthier lifestyle.</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="weightloss.html">
+                    <h3>Weight Loss</h3>
+                    <p>Meals designed to support your weight loss journey.</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href="proteinpacked.html">
+                    <h3>Protein Packed</h3>
+                    <p>High-protein meals to fuel your body and build strength.</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href = "healthysnack.html">
+                    <h3>Healthy Snacks</h3>
+                    <p>Light and nutritious snack ideas to keep you energized.</p>
+                    </a>
+                </div>
+                <div class="category">
+                    <a href = "vegan.html">
+                    <h3>Vegan</h3>
+                    <p>Plant-based meals for a compassionate and healthy lifestyle.</p>
+                    </a>
+                </div>
+>>>>>>> 110770f9fc347991f1521277adcc02ac7f096e6d
             </div>
-            <div class="tip">
-                <h3>Meal Preps</h3>
-                <p>Plan your meals efficiently with our Meal Preps suggestions. We offer ideas for a balanced breakfast, lunch, and dinner to simplify your day.</p>
-                <button id="openModalMealPreps">View Meal Plans</button>
+        </div>
+    </div>
+     <!------Footer-------->
+     <div class="footer">
+        
+        <div class="icons1">
+            <div class="icons">
+            <a id="icon" href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a id="icon" href=""><i class='bx bxl-pinterest' ></i></a>
+            <a id="icon" href=""><i class='bx bxl-tiktok' ></i></a>
+            <a id="icon" href=""><i class='bx bxl-instagram' ></i></a>
+            <a id="icon" href=""><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <div class="logo">
+            <p id="logoo"><b id="homee">Home</b><span id="logostyle">Cooking</span></p>
             </div>
         </div>
     
 
+<<<<<<< HEAD
 
                
         <!-- Programi i Ushqimit dhe Ushqimi i Shëndetshëm -->
@@ -227,9 +356,20 @@
                 <li>Guidance on portion control and balanced eating</li>
                 <li>Support in making healthier food choices every day</li>
             </ul>
+=======
+        <div class="email">
+            <h1 id="email1"><span id="signup">Signup</span> for Email Updates</h1>
+            <p id="email2"><i>Get a Free eCookbook with our top 25 recipes.</i></p>
+            <form id="email3">
+                <label></label>
+                <input id="email4" type="text" placeholder="Firs Name" required>
+                <input id="email5" type="email" placeholder="Email" required>
+                <button id="submit" name="login" value="login" type="submit">GO</button>
+            </form>
+>>>>>>> 110770f9fc347991f1521277adcc02ac7f096e6d
         </div>
-    </section>
 
+<<<<<<< HEAD
 
     <!-- Modals -->
     
@@ -244,58 +384,22 @@
                 <li>Low-Carb Options</li>
             </ul>
             <button id="closeModalCategories">Close</button>
+=======
+        <div id="address">
+            <address>
+                Home Cooking<br>
+                123 Main Street <br>
+                City, Country 12345<br>
+                <a id="numri" href="mailto:homecooking@gmail.com">homecooking@gmail.com</a><br>
+                <a id="numri" href="tel:+123456789">+383 (45) 567-895</a>
+            </address>
+>>>>>>> 110770f9fc347991f1521277adcc02ac7f096e6d
         </div>
     </div>
+    <!--------------Footer end----------->
 
-    <div id="modalMealPreps" class="modal">
-        <div class="modal-content">
-            <h4>Meal Preps Suggestions</h4>
-            <ul>
-                <li><b>Breakfast:</b> Overnight oats with fruits and nuts</li>
-                <li><b>Lunch:</b> Grilled chicken salad with avocado</li>
-                <li><b>Dinner:</b> Steamed fish with roasted vegetables</li>
-            </ul>
-            <button id="closeModalMealPreps">Close</button>
-        </div>
-    </div>
-
-    <script>
-        // Modal për kategoritë
-        const modalCategories = document.getElementById('modalCategories');
-        const openModalCategories = document.getElementById('openModalCategories');
-        const closeModalCategories = document.getElementById('closeModalCategories');
-
-        openModalCategories.addEventListener('click', () => {
-            modalCategories.style.display = 'block';
-        });
-
-        closeModalCategories.addEventListener('click', () => {
-            modalCategories.style.display = 'none';
-        });
-
-        // Modal për meal preps
-        const modalMealPreps = document.getElementById('modalMealPreps');
-        const openModalMealPreps = document.getElementById('openModalMealPreps');
-        const closeModalMealPreps = document.getElementById('closeModalMealPreps');
-
-        openModalMealPreps.addEventListener('click', () => {
-            modalMealPreps.style.display = 'block';
-        });
-
-        closeModalMealPreps.addEventListener('click', () => {
-            modalMealPreps.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target == modalCategories) {
-                modalCategories.style.display = 'none';
-            }
-            if (e.target == modalMealPreps) {
-                modalMealPreps.style.display = 'none';
-            }
-        });
-    </script>
     <script src="../js/navbar.js"></script>
+<<<<<<< HEAD
     <script>
         var Value="";
 
@@ -384,8 +488,15 @@
             localStorage.setItem('myValue', Value);
         };
     </script>
+=======
+
+>>>>>>> 110770f9fc347991f1521277adcc02ac7f096e6d
 </body>
 </html>
+
+
+
+
 
 
 
