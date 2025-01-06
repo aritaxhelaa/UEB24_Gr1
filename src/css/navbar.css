@@ -3,12 +3,14 @@
 body {
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* Adjust this value based on your navbar height */
 }
 
 #navbar-placeholder {
-    position: relative;
+    position: fixed; /* Change from relative to fixed */
     width: 100%;
     top: 0;
+    z-index: 1000; /* Add this to ensure navbar stays on top of other content */
 }
 
 .background {
@@ -189,4 +191,10 @@ body {
         margin: 0;
         text-align: center;
     }
+}
+
+.main-content {
+    margin-top: 120px; /* Adjust this value based on your navbar height */
+    position: relative;
+    z-index: 1;
 }
