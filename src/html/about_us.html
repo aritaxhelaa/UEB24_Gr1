@@ -29,7 +29,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-
 <style>
     .about{
         display: flex;
@@ -227,21 +226,21 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #f9f9f9;  
+    background-color: #f9f9f9;  /* Light background color */
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .feedback-section h2 {
-    font-size: 2rem;  
-    font-weight: 700; 
-    color: #333; 
+    font-size: 2rem;  /* Matches the size of 'Meet the Team' */
+    font-weight: 700; /* Matches the weight */
+    color: #333; /* Same color as other section titles */
     margin-bottom: 10px;
 }
 
 .feedback-section p {
-    font-size: 1.1rem; 
-    color: #666; 
+    font-size: 1.1rem; /* Slightly larger font for paragraph */
+    color: #666; /* Subtle text color */
     margin-bottom: 20px;
 }
 
@@ -303,7 +302,8 @@ textarea {
 }
 
 textarea:focus {
-    border-color: #ffcc00;
+    border-color: #ffcc00; /* Highlight border when focused */
+}
 
 /* Submit Button Styling */
 .submit-button input[type="submit"] {
@@ -319,10 +319,10 @@ textarea:focus {
 }
 
 .submit-button input[type="submit"]:hover {
-    background-color: #e76a00; 
+    background-color: #e76a00; /* Slightly darker orange on hover */
 }
 
-
+/* Responsive Design */
 @media (max-width: 600px) {
     .feedback-section {
         width: 90%;
@@ -336,39 +336,6 @@ textarea:focus {
         font-size: 0.9rem;
     }
 }
-#thankYouPopup {
-    display: none; 
-    position: fixed;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000; 
-    text-align: center;
-}
-
-#thankYouPopup h3 {
-    margin-bottom: 15px;
-}
-
-#thankYouPopup p {
-    margin: 10px 0;
-}
-#closeBtn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    border: none;
-    background: none;
-    color: #000;
-    cursor: pointer;
-}
-
-
 
     .contactus-section {
     padding: 40px;
@@ -434,13 +401,13 @@ textarea:focus {
 }
 
 .contact-icon i {
-    font-size: 40px; 
+    font-size: 40px; /* Ensures icons are sized properly */
 }
 
 /* Phone icon style */
 .bxs-phone {
     font-size: 40px;
-    color: black; 
+    color: black; /* Ensure the phone icon appears in black */
 }
 
 #our-history {
@@ -494,7 +461,6 @@ textarea:focus {
     transform: scale(1.2);
 }
 
-
     .footer{
         display: flex;
         justify-content: space-around;
@@ -545,8 +511,6 @@ textarea:focus {
     /* footer end */
    
   
-   
-  
 </style>
 </head>
 <body>
@@ -593,7 +557,7 @@ textarea:focus {
         <div class="teksti4">
         <h1 class="teksti1">Meet the Team</h1>
         <p class="teksti2">
-        We have an entire team of geniuses behind us at Home Cooking who are experts in a little bit of everything
+        We have an entire team of geniuses behind us at Pinch of Yum who are experts in a little bit of everything
         -from <span class="teksti5">customer service, to social media, to videography, to assisting with recipe shoots. They are EVERYTHING.</span>
         </p>
         <p id="ourteam">Our team helps keep it all running smoothly.</p>
@@ -639,19 +603,18 @@ textarea:focus {
         </div>
 
 
-
         <div class="personi3">
             <img src="../../assets/images/njeri3.jpg">
             <div class="details">
-                <h1 class="h11">&Euml;MBLA</h1>
+                <h1 class="h11">JENA</h1>
                 <p>
-                    &Euml;mbla is the Communications Manager at Home Cooking. 
+                    Jenna is the Communications Manager at Home Cooking. 
                 </p>
                 <p id="shfaq2">
                    She manages much of the day-to-day
                      communication with readers and brands – on and off the blog. You can find her answering recipe questions on posts,
                       helping readers with ebook purchases, coordinating partnership details with brands, 
-                      and other various behind-the-scenes projects. &Euml;mbla lives in Minnesota with her husband.
+                      and other various behind-the-scenes projects. Jenna lives in Minnesota with her husband.
                       <br><button id="hide2">Show Less</button>
                 </p>
                 <button id="show2">
@@ -685,8 +648,7 @@ textarea:focus {
     <h2>Feedback</h2>
     <p>We would love to hear your feedback!</p>
 
-    <form id="feedbackForm" action="#" method="POST">
-
+    <form action="#" method="POST">
         <!-- Question: Will you visit us again? -->
         <div class="feedback-question">
             <label for="visit-again">Will you visit us again?</label><br>
@@ -725,14 +687,6 @@ textarea:focus {
             <input type="submit" value="Submit Feedback">
         </div>
     </form>
-    <!-- Popup - -->
-    <div id="thankYouPopup" style="display: none;">
-        <button id="closeBtn" onclick="closePopup()">X</button>
-        <h3>Thank you for your feedback!</h3>
-        <p>Your rating: <span id="ratingValue"></span></p>
-        <p>Your rating in exponential format: <span id="ratingExp"></span></p>
-        <p>Max value allowed for rating: <span id="maxValue"></span></p>
-    </div>
 </section>
 <!--------------------------------------- Contact Us Section --------------------------------------> 
 <div class="contactus-section">
@@ -805,9 +759,8 @@ textarea:focus {
         </div>
         <p>Our journey began with a passion for good food and the joy of sharing recipes. Founded in 2010, we started as a small group of food enthusiasts who loved experimenting with flavors and discovering new culinary traditions. Over the years, our love for cooking grew into a vibrant community, and today, we are proud to offer a platform that connects food lovers from around the world. Whether you're a novice cook or an experienced chef, we aim to inspire and support you with delicious, easy-to-follow recipes that bring people together around the table.</p>
     </div>
-    <button onclick="switchPositions()" class="switch-button">&#8596;</button> 
+    <button onclick="switchPositions()" class="switch-button">&#8596;</button> <!-- Shigjetë -->
 </section>
-
 
 
   
@@ -816,11 +769,11 @@ textarea:focus {
         
             <div class="icons1">
                 <div class="icons">
-                <a id="icon" href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
-                <a id="icon" href="https://www.pinterest.com/"><i class='bx bxl-pinterest' ></i></a>
-                <a id="icon" href="https://www.tiktok.com/explore"><i class='bx bxl-tiktok' ></i></a>
-                <a id="icon" href="https://www.instagram.com/"><i class='bx bxl-instagram' ></i></a>
-                <a id="icon" href="https://x.com/"><i class='bx bxl-twitter' ></i></a>
+                    <a id="icon" href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+                    <a id="icon" href="https://www.pinterest.com/"><i class='bx bxl-pinterest' ></i></a>
+                    <a id="icon" href="https://www.tiktok.com/explore"><i class='bx bxl-tiktok' ></i></a>
+                    <a id="icon" href="https://www.instagram.com/"><i class='bx bxl-instagram' ></i></a>
+                    <a id="icon" href="https://x.com/"><i class='bx bxl-twitter' ></i></a>
                 </div>
                 <div class="logo">
                 <p id="logoo"><b id="homee">Home</b><span id="logostyle">Cooking</span></p>
@@ -850,7 +803,6 @@ textarea:focus {
         </div>
         <!--------------Footer end----------->
 
-
         <script src="../js/navbar.js"></script>
 
     </body>
@@ -864,13 +816,13 @@ $(document).ready(function () {
             $('#shfaq').show();
             $('#show').hide();
             $('#hide').show();
-            audio.play(); 
+            audio.play(); // Luaj audion kur shfaqet teksti
         } else if (action === 'hide') {
             $('#shfaq').hide();
             $('#hide').hide();
             $('#show').show();
-            audio.pause(); 
-            audio.currentTime = 0; 
+            audio.pause(); // Ndal audion kur fsheh tekstin
+            audio.currentTime = 0; // Kthehu në fillim
         }
     }
 
@@ -905,7 +857,6 @@ $(document).ready(function () {
         heq_shfaq('hide1'); 
       });
  });
-
 
 
  $(document).ready(function () {
@@ -957,66 +908,15 @@ $(document).ready(function () {
  function switchPositions() {
     var imageContainer = document.querySelector('.history-image-container');
     
-    // Zhvendosja e figurës në anën e majtë dhe të djathtë të tekstit
+    // Ndërroni pozicionin e figurës pa lëvizur tekstin
     if (imageContainer.style.order === '1') {
-        imageContainer.style.order = '-1'; 
+        imageContainer.style.order = '-1'; // Figura shkon në të majtë
     } else {
-        imageContainer.style.order = '1'; 
+        imageContainer.style.order = '1'; // Figura shkon në të djathtë
     }
 }
- 
-document.getElementById('feedbackForm').addEventListener('submit', function(event) { 
-    event.preventDefault(); 
 
-    // Kontrollo nese jane plotesuar fushat
-    var visitAgain = document.querySelector('input[name="visit-again"]:checked');
-    var rating = document.querySelector('input[name="rating"]:checked');
-    var message = document.getElementById('message').value.trim();
-
-    // Verifikimi 
-    if (!visitAgain) {
-        alert("Please select whether you will visit us again.");
-        return; 
-    }
-
-    // Verifikimi 
-    if (!rating) {
-        alert("Please rate us.");
-        return; 
-    }
-
-    // Verifikimi 
-    if (message === "") {
-        alert("Please enter your feedback before submitting.");
-        return; 
-    }
-
-    //  max value  (5)
-    let maxValue = 5; 
-    let ratingValue = parseInt(rating.value);
-
-    
-    if (ratingValue > maxValue) {
-        alert("Rating exceeds maximum value of 5!");
-        return;
-    }
-
-    
-    let ratingAsString = ratingValue.toString();
-
-    // Përdor toExponential() 
-    let ratingInExponential = ratingValue.toExponential();
-
-    // Shfaq popup 
-    document.getElementById('thankYouPopup').style.display = 'block';
-    document.getElementById('ratingValue').textContent = ratingAsString;
-    document.getElementById('ratingExp').textContent = ratingInExponential;
-    document.getElementById('maxValue').textContent = maxValue;
-});
-
-function closePopup() {
-    document.getElementById('thankYouPopup').style.display = 'none';
-}
 
 </script>
 </html>
+
