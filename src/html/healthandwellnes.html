@@ -7,8 +7,20 @@
 
     <!-- Linku për CSS -->
     <link rel="stylesheet" href="../css/navbar.css">
+      <!--Fonts-->
+
+      <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+      <!--Box icons-->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+      <link rel="stylesheet" href="../css/navbar.css">
     <style>
         /* Seksioni i Health and Wellness */
+        
         .health-wellness {
             text-align: center;
             padding: 40px 20px;
@@ -71,8 +83,10 @@
         .tip button:hover {
             background-color: #d1845b;
         }
+            
 
         /* Modal */
+        
         .modal {
             display: none;
             position: fixed;
@@ -124,8 +138,10 @@
         .modal-content button:hover {
             background-color: #d1845b;
         }
+            
 
         /* Programi i Ushqimit dhe Ushqimi i Shëndetshëm */
+        
         .healthy-eating {
             background-color: #f0f3f5;
             padding: 40px 20px;
@@ -147,6 +163,21 @@
         .program-benefits li {
             margin: 10px 0;
         }
+
+        .lista a {
+            color: white; 
+            text-decoration: none;
+        }
+            
+
+    /*---Footer end---*/
+
+    
+  
+        
+  
+    
+    /*---Footer end---*/
     </style>
 </head>
 <body>
@@ -154,11 +185,20 @@
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
 
+
+
+
+
+
+
+
     <!-- Seksioni i Health and Wellness -->
+    
     <section class="health-wellness">
         <h1>Health and Wellness</h1>
         <p>At Home Cooking, we believe that health and wellness are the foundation for living a fulfilling life. We provide you with a variety of resources to help you maintain a healthy lifestyle while enjoying delicious, nutritious meals.</p>
-
+    
+    
         <div class="wellness-tips">
             <div class="tip">
                 <h3>Eat Balanced Meals</h3>
@@ -171,8 +211,12 @@
                 <button id="openModalMealPreps">View Meal Plans</button>
             </div>
         </div>
+    
 
+
+               
         <!-- Programi i Ushqimit dhe Ushqimi i Shëndetshëm -->
+        
         <div class="healthy-eating">
             <h2>Healthy Eating Program</h2>
             <p>Our Healthy Eating Program is designed to make healthy eating simple and enjoyable. We provide meal plans, shopping lists, and easy-to-follow recipes to help you get started on your wellness journey.</p>
@@ -186,7 +230,9 @@
         </div>
     </section>
 
+
     <!-- Modals -->
+    
     <div id="modalCategories" class="modal">
         <div class="modal-content">
             <h4>Balanced Meal Categories</h4>
@@ -250,6 +296,94 @@
         });
     </script>
     <script src="../js/navbar.js"></script>
+    <script>
+        var Value="";
+
+        function ushqimi1(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush1").textContent; 
+            var cmimi1=document.getElementById("ushqi1").textContent;
+            Value+=('\n'+emri1+"_______________"+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi2(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush2").textContent;
+            var cmimi1=document.getElementById("ushqi2").textContent;
+            Value+=('\n'+emri1+"______________"+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi3(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush3").textContent;
+            var cmimi1=document.getElementById("ushqi3").textContent;
+            Value+=('\n'+emri1+'______________'+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi4(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush4").textContent; 
+            var cmimi1=document.getElementById("ushqi4").textContent;
+            Value+=('\n'+emri1+"______________"+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi5(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush5").textContent;
+            var cmimi1=document.getElementById("ushqi5").textContent;
+            Value+=('\n'+emri1+'______________'+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi6(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush6").textContent;
+            var cmimi1=document.getElementById("ushqi6").textContent;
+            Value+=('\n'+emri1+'______________'+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi7(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush7").textContent; 
+            var cmimi1=document.getElementById("ushqi7").textContent;
+            Value+=('\n'+emri1+'______________'+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi8(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush8").textContent; 
+            var cmimi1=document.getElementById("ushqi8").textContent;
+            Value+=('\n'+emri1+'______________'+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi9(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush9").textContent; 
+            var cmimi1=document.getElementById("ushqi9").textContent;
+            Value+=('\n'+emri1+'______________'+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi10(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush10").textContent;
+            var cmimi1=document.getElementById("ushqi10").textContent;
+            Value+=('\n'+emri1+'______________'+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi11(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush11").textContent; 
+            var cmimi1=document.getElementById("ushqi11").textContent;
+            Value+=('\n'+emri1+'______________'+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+        function ushqimi12(){
+            alert("Eshte shtuar ne liste");
+            var emri1=document.getElementById("ush12").textContent;
+            var cmimi1=document.getElementById("ushqi12").textContent;
+            Value+=('\n'+emri1+'______________'+cmimi1);
+            localStorage.setItem('myValue', Value);
+        };
+    </script>
 </body>
 </html>
 
