@@ -391,7 +391,58 @@
     color: black; /* Ensure the phone icon appears in black */
 }
 
-    
+#our-history {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.history-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.history-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.history-image-container {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.history-image {
+    width: 300px;
+    height: auto;
+}
+
+.history-content p {
+    width: 55%;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+.switch-button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.switch-button:hover {
+    transform: scale(1.2);
+}
+
+
     .footer{
         display: flex;
         justify-content: space-around;
@@ -676,7 +727,20 @@
 
 <!-------------------------------------------------------------------------------------------------->
 
+<section id="our-history">
+    <h2 class="history-title">Our History</h2>
+    <div class="history-content">
+        <div class="history-image-container">
+            <img src="../../assets/images/ourhistory.png" alt="Our History Image" class="history-image">
+        </div>
+        <p>Our journey began with a passion for good food and the joy of sharing recipes. Founded in 2010, we started as a small group of food enthusiasts who loved experimenting with flavors and discovering new culinary traditions. Over the years, our love for cooking grew into a vibrant community, and today, we are proud to offer a platform that connects food lovers from around the world. Whether you're a novice cook or an experienced chef, we aim to inspire and support you with delicious, easy-to-follow recipes that bring people together around the table.</p>
+    </div>
+    <button onclick="switchPositions()" class="switch-button">&#8596;</button> <!-- Shigjetë -->
+</section>
 
+
+
+  
          <!------Footer-------->
          <div class="footer">
         
@@ -797,6 +861,18 @@ $(document).ready(function () {
         heq_shfaq2('hide3'); 
       });
  });
+ function switchPositions() {
+    var imageContainer = document.querySelector('.history-image-container');
+    
+    // Ndërroni pozicionin e figurës pa lëvizur tekstin
+    if (imageContainer.style.order === '1') {
+        imageContainer.style.order = '-1'; // Figura shkon në të majtë
+    } else {
+        imageContainer.style.order = '1'; // Figura shkon në të djathtë
+    }
+}
+
+
 
 </script>
 </html>
