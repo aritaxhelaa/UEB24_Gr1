@@ -8,13 +8,14 @@ $(document).ready(function() {
     const filterCategory = urlParams.get('filter');
 
     function applyFilter(category) {
-        foodItems.each(function() {
-            if (category === "all" || $(this).hasClass(category)) {
-                $(this).show();
+        for (let i = 0; i < foodItems.length; i++) {
+            const item = $(foodItems[i]); 
+            if (category === "all" || item.hasClass(category)) {
+                item.show(); 
             } else {
-                $(this).hide();
+                item.hide(); 
             }
-        });
+        }
 
         const images = {
             breakfast: "url('../../assets/images/breakfast.jpg')",
@@ -39,14 +40,15 @@ $(document).ready(function() {
 
     searchInput.on("input", function() {
         const searchQuery = $(this).val().toLowerCase().trim();
-        foodItems.each(function() {
-            const itemName = $(this).find("h3").text().toLowerCase();
+        for (let i = 0; i < foodItems.length; i++) {
+            const item = $(foodItems[i]);
+            const itemName = item.find("h3").text().toLowerCase();
             if (itemName.includes(searchQuery)) {
-                $(this).show(); 
+                item.show(); 
             } else {
-                $(this).hide();
+                item.hide(); 
             }
-        });
+        }
     });
 
     const allButton = $('.filter-btn[data-category="all"]');
