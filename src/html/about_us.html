@@ -584,6 +584,8 @@
             </div>
         </div>
 
+
+
         <div class="personi3">
             <img src="../../assets/images/njeri3.jpg">
             <div class="details">
@@ -814,6 +816,30 @@ $(document).ready(function () {
         shfaq_heq('hide');
     });
 });
+
+$(document).ready(function () {
+      
+      function heq_shfaq(action) {
+        if (action === 'show1') {
+          $('#shfaq1').show();          
+          $('#show1').hide();       
+          $('#hide1').show();       
+        } else if (action === 'hide1') {
+          $('#shfaq1').hide();          
+          $('#hide1').hide();       
+          $('#show1').show();      
+        }
+      }
+      
+      $('#show1').click(function () {
+        heq_shfaq('show1'); 
+      });
+
+      $('#hide1').click(function () {
+        heq_shfaq('hide1'); 
+      });
+ });
+
 
 
  $(document).ready(function () {
