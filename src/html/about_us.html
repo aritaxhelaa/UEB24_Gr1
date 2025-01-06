@@ -232,15 +232,15 @@
 }
 
 .feedback-section h2 {
-    font-size: 2rem;  /* Matches the size of 'Meet the Team' */
-    font-weight: 700; /* Matches the weight */
-    color: #333; /* Same color as other section titles */
+    font-size: 2rem;  
+    font-weight: 700; 
+    color: #333; 
     margin-bottom: 10px;
 }
 
 .feedback-section p {
-    font-size: 1.1rem; /* Slightly larger font for paragraph */
-    color: #666; /* Subtle text color */
+    font-size: 1.1rem; 
+    color: #666; 
     margin-bottom: 20px;
 }
 
@@ -302,11 +302,7 @@ textarea {
 }
 
 textarea:focus {
-<<<<<<< HEAD
-    border-color: #ffcc00; /* Highlight border when focused */
-=======
     border-color: #ffcc00;
->>>>>>> 7cb10b8a4b3e1c105e546c51b6cac52dfed876ac
 }
 
 .submit-button input[type="submit"] {
@@ -322,10 +318,10 @@ textarea:focus {
 }
 
 .submit-button input[type="submit"]:hover {
-    background-color: #e76a00; /* Slightly darker orange on hover */
+    background-color: #e76a00; 
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
     .feedback-section {
         width: 90%;
@@ -404,13 +400,13 @@ textarea:focus {
 }
 
 .contact-icon i {
-    font-size: 40px; /* Ensures icons are sized properly */
+    font-size: 40px; 
 }
 
 /* Phone icon style */
 .bxs-phone {
     font-size: 40px;
-    color: black; /* Ensure the phone icon appears in black */
+    color: black; 
 }
 
 #our-history {
@@ -512,7 +508,39 @@ textarea:focus {
         text-decoration: none;
     }
     /* footer end */
-   
+    #thankYouPopup {
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+    text-align: center;
+}
+
+#thankYouPopup h3 {
+    margin-bottom: 15px;
+}
+
+#thankYouPopup p {
+    margin: 10px 0;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: #000;
+    cursor: pointer;
+}
+
   
 </style>
 </head>
@@ -651,7 +679,7 @@ textarea:focus {
     <h2>Feedback</h2>
     <p>We would love to hear your feedback!</p>
 
-    <form action="#" method="POST">
+    <form id="feedbackForm" action="#" method="POST">
         <!-- Question: Will you visit us again? -->
         <div class="feedback-question">
             <label for="visit-again">Will you visit us again?</label><br>
@@ -662,7 +690,7 @@ textarea:focus {
                 <label for="no">No</label>
             </div>
         </div><br>
-
+    
         <!-- Star Rating Question -->
         <div class="feedback-question">
             <label for="rating">Please rate us:</label><br>
@@ -679,18 +707,28 @@ textarea:focus {
                 <label for="star5">&#9733;</label>
             </div>
         </div><br>
-          <!-- Textarea for Message -->
-          <div class="feedback-question">
+    
+        <!-- Textarea for Message -->
+        <div class="feedback-question">
             <label for="message">We'd love to hear your thoughts, suggestions, or anything you'd like to share:</label><br>
             <textarea id="message" name="message" rows="4" placeholder="Enter your message here..."></textarea>
         </div><br>
-
+        
+        <div id="thankYouPopup" style="display: none;">
+            <button type="button" id="closeBtn" onclick="closePopup()">X</button>
+            <h3>Thank you for your feedback!</h3>
+            <p>Your rating: <span id="ratingValue"></span></p>
+            <p>Your rating in exponential format: <span id="ratingExp"></span></p>
+            <p>Max value allowed for rating: <span id="maxValue"></span></p>
+        </div>
+    
         <!-- Submit Button -->
         <div class="submit-button">
             <input type="submit" value="Submit Feedback">
         </div>
     </form>
 </section>
+    
 <!--------------------------------------- Contact Us Section --------------------------------------> 
 <div class="contactus-section">
     <div class="contact-header">
@@ -819,13 +857,13 @@ $(document).ready(function () {
             $('#shfaq').show();
             $('#show').hide();
             $('#hide').show();
-            audio.play(); // Luaj audion kur shfaqet teksti
+            audio.play(); 
         } else if (action === 'hide') {
             $('#shfaq').hide();
             $('#hide').hide();
             $('#show').show();
-            audio.pause(); // Ndal audion kur fsheh tekstin
-            audio.currentTime = 0; // Kthehu në fillim
+            audio.pause(); 
+            audio.currentTime = 0; 
         }
     }
 
@@ -911,41 +949,38 @@ $(document).ready(function () {
  function switchPositions() {
     var imageContainer = document.querySelector('.history-image-container');
     
-    // Ndërroni pozicionin e figurës pa lëvizur tekstin
+  
     if (imageContainer.style.order === '1') {
-        imageContainer.style.order = '-1'; // Figura shkon në të majtë
+        imageContainer.style.order = '-1'; 
     } else {
         imageContainer.style.order = '1'; 
     }
 }
- 
 document.getElementById('feedbackForm').addEventListener('submit', function(event) { 
     event.preventDefault(); 
 
-    // Kontrollo nese jane plotesuar fushat
+    
     var visitAgain = document.querySelector('input[name="visit-again"]:checked');
     var rating = document.querySelector('input[name="rating"]:checked');
     var message = document.getElementById('message').value.trim();
 
-    // Verifikimi 
     if (!visitAgain) {
         alert("Please select whether you will visit us again.");
         return; 
     }
 
-    // Verifikimi 
+    
     if (!rating) {
         alert("Please rate us.");
         return; 
     }
 
-    // Verifikimi 
+    
     if (message === "") {
         alert("Please enter your feedback before submitting.");
         return; 
     }
 
-    //  max value  (5)
     let maxValue = 5; 
     let ratingValue = parseInt(rating.value);
 
@@ -958,10 +993,10 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
     
     let ratingAsString = ratingValue.toString();
 
-    // Përdor toExponential() 
+   
     let ratingInExponential = ratingValue.toExponential();
 
-    // Shfaq popup 
+  
     document.getElementById('thankYouPopup').style.display = 'block';
     document.getElementById('ratingValue').textContent = ratingAsString;
     document.getElementById('ratingExp').textContent = ratingInExponential;
@@ -972,6 +1007,6 @@ function closePopup() {
     document.getElementById('thankYouPopup').style.display = 'none';
 }
 
+
 </script>
 </html>
-
