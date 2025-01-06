@@ -3,12 +3,14 @@
 body {
     margin: 0;
     padding: 0;
+    padding-top: 80px;
 }
 
 #navbar-placeholder {
-    position: relative;
+    position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1000; 
 }
 
 .background {
@@ -21,7 +23,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Rest of your existing navbar.css styles remain the same */
+
 .list {
     display: flex;
     margin-top: 35px;
@@ -189,4 +191,10 @@ body {
         margin: 0;
         text-align: center;
     }
+}
+
+.main-content {
+    margin-top: 120px;
+    position: relative;
+    z-index: 1;
 }

@@ -337,39 +337,38 @@ textarea:focus {
         font-size: 0.9rem;
     }
 }
-/* Popup Style */
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+#thankYouPopup {
     display: none; /* Initially hidden */
-    z-index: 9999; /* Ensures the popup is on top */
-}
-
-.popup-content {
+    position: fixed; /* Ensures it's in the center of the screen */
+    top: 50%; /* Centers the popup vertically */
+    left: 50%; /* Centers the popup horizontally */
+    transform: translate(-50%, -50%); /* Exact centering */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Makes sure it's on top of other content */
     text-align: center;
 }
 
-.popup button {
-    background-color: #4CAF50;  /* Green button */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+#thankYouPopup h3 {
+    margin-bottom: 15px;
 }
 
-.popup button:hover {
-    background-color: #45a049;
+#thankYouPopup p {
+    margin: 10px 0;
 }
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: #000;
+    cursor: pointer;
+}
+
 
 
     .contactus-section {
@@ -645,15 +644,15 @@ textarea:focus {
         <div class="personi3">
             <img src="../../assets/images/njeri3.jpg">
             <div class="details">
-                <h1 class="h11">JENA</h1>
+                <h1 class="h11">&Euml;MBLA</h1>
                 <p>
-                    Jenna is the Communications Manager at Home Cooking. 
+                    &Euml;mbla is the Communications Manager at Home Cooking. 
                 </p>
                 <p id="shfaq2">
                    She manages much of the day-to-day
                      communication with readers and brands – on and off the blog. You can find her answering recipe questions on posts,
                       helping readers with ebook purchases, coordinating partnership details with brands, 
-                      and other various behind-the-scenes projects. Jenna lives in Minnesota with her husband.
+                      and other various behind-the-scenes projects. &Euml;mbla lives in Minnesota with her husband.
                       <br><button id="hide2">Show Less</button>
                 </p>
                 <button id="show2">
@@ -728,11 +727,12 @@ textarea:focus {
         </div>
     </form>
     <!-- Popup - Dritarja që do të shfaqet kur të dërgoni formularin -->
-    <div id="thankYouPopup" class="popup" style="display: none;">
-        <div class="popup-content">
-            <h3>Thank you for your feedback!</h3>
-            <button onclick="closePopup()">Close</button>
-        </div>
+    <div id="thankYouPopup" style="display: none;">
+        <button id="closeBtn" onclick="closePopup()">X</button>
+        <h3>Thank you for your feedback!</h3>
+        <p>Your rating: <span id="ratingValue"></span></p>
+        <p>Your rating in exponential format: <span id="ratingExp"></span></p>
+        <p>Max value allowed for rating: <span id="maxValue"></span></p>
     </div>
 </section>
 <!--------------------------------------- Contact Us Section --------------------------------------> 
@@ -966,7 +966,7 @@ $(document).ready(function () {
     }
 }
  
-document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+document.getElementById('feedbackForm').addEventListener('submit', function(event) { 
     event.preventDefault(); // Pengon dërgimin e formës në mënyrë të parazgjedhur
 
     // Kontrollo nëse janë plotësuar të gjitha fushat
@@ -992,14 +992,32 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
         return; // Stopojmë ekzekutimin më tej
     }
 
-    // Nëse të gjitha janë plotësuar, shfaq popup me mesazhin e falënderimit
+    // Përdorim një max value të caktuar (5)
+    let maxValue = 5; 
+    let ratingValue = parseInt(rating.value);
+
+    // Kontrollo nëse rating-u është më i madh se maxValue
+    if (ratingValue > maxValue) {
+        alert("Rating exceeds maximum value of 5!");
+        return;
+    }
+
+    // Përdor toString() për të shfaqur rating-un në format tekstual
+    let ratingAsString = ratingValue.toString();
+
+    // Përdor toExponential() për të shfaqur rating-un në format eksponencial
+    let ratingInExponential = ratingValue.toExponential();
+
+    // Shfaq popup me mesazhin e falënderimit dhe me formate të ndryshme
     document.getElementById('thankYouPopup').style.display = 'block';
+    document.getElementById('ratingValue').textContent = ratingAsString;
+    document.getElementById('ratingExp').textContent = ratingInExponential;
+    document.getElementById('maxValue').textContent = maxValue;
 });
 
 function closePopup() {
     document.getElementById('thankYouPopup').style.display = 'none';
 }
-
 
 </script>
 </html>
