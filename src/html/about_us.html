@@ -233,9 +233,9 @@
 }
 
 .feedback-section h2 {
-    font-size: 2rem;  /* Matches the size of 'Meet the Team' */
-    font-weight: 700; /* Matches the weight */
-    color: #333; /* Same color as other section titles */
+    font-size: 2rem;  
+    font-weight: 700; 
+    color: #333; 
     margin-bottom: 10px;
 }
 
@@ -337,6 +337,40 @@ textarea:focus {
         font-size: 0.9rem;
     }
 }
+/* Popup Style */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    z-index: 9999; /* Ensures the popup is on top */
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup button {
+    background-color: #4CAF50;  /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+    background-color: #45a049;
+}
+
 
     .contactus-section {
     padding: 40px;
@@ -513,6 +547,8 @@ textarea:focus {
     /* footer end */
    
   
+   
+  
 </style>
 </head>
 <body>
@@ -651,7 +687,8 @@ textarea:focus {
     <h2>Feedback</h2>
     <p>We would love to hear your feedback!</p>
 
-    <form action="#" method="POST">
+    <form id="feedbackForm" action="#" method="POST">
+
         <!-- Question: Will you visit us again? -->
         <div class="feedback-question">
             <label for="visit-again">Will you visit us again?</label><br>
@@ -690,6 +727,13 @@ textarea:focus {
             <input type="submit" value="Submit Feedback">
         </div>
     </form>
+    <!-- Popup - Dritarja që do të shfaqet kur të dërgoni formularin -->
+    <div id="thankYouPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h3>Thank you for your feedback!</h3>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
 </section>
 <!--------------------------------------- Contact Us Section --------------------------------------> 
 <div class="contactus-section">
@@ -921,7 +965,40 @@ $(document).ready(function () {
         imageContainer.style.order = '1'; // Figura shkon në të djathtë
     }
 }
+ 
+document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Pengon dërgimin e formës në mënyrë të parazgjedhur
 
+    // Kontrollo nëse janë plotësuar të gjitha fushat
+    var visitAgain = document.querySelector('input[name="visit-again"]:checked');
+    var rating = document.querySelector('input[name="rating"]:checked');
+    var message = document.getElementById('message').value.trim();
+
+    // Verifikimi për "Will you visit us again?"
+    if (!visitAgain) {
+        alert("Please select whether you will visit us again.");
+        return; // Stopojmë ekzekutimin më tej
+    }
+
+    // Verifikimi për vlerësimin me yje
+    if (!rating) {
+        alert("Please rate us.");
+        return; // Stopojmë ekzekutimin më tej
+    }
+
+    // Verifikimi për fushën e mesazhit
+    if (message === "") {
+        alert("Please enter your feedback before submitting.");
+        return; // Stopojmë ekzekutimin më tej
+    }
+
+    // Nëse të gjitha janë plotësuar, shfaq popup me mesazhin e falënderimit
+    document.getElementById('thankYouPopup').style.display = 'block';
+});
+
+function closePopup() {
+    document.getElementById('thankYouPopup').style.display = 'none';
+}
 
 
 </script>
